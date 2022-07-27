@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 import NFTCard from "../components/NFTCard"
 import Link from "next/link"
@@ -38,7 +39,7 @@ const Gallery: NextPage = () => {
 
   // read call to get current totalSupply
   const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-    addressOrName: "0x230864bab819a49a3e3cd634eb266f9042d22e82", // Sofja Collection
+    addressOrName: "0x230864BaB819A49a3e3CD634EB266F9042d22e82", // Sofja Collection
     contractInterface: editionsABI.abi,
     functionName: 'totalSupply',
     args: [],
@@ -192,10 +193,10 @@ const Gallery: NextPage = () => {
   return (
     <div>
       <Header />
-      <div className=" min-h-screen bg-black flex flex-row flex-wrap justify-center">
+      <div className=" min-h-screen flex flex-row flex-wrap justify-center">
       <Switch.Group>
         <div className=" mt-20 mb-5 w-full flex flex-row justify-center items-center">
-            <Switch.Label className="mr-4 font-bold text-white">FULL COLLECTION</Switch.Label>
+            <Switch.Label className="mr-4 font-bold">todo</Switch.Label>
             <Switch
               checked={enabled}
               onChange={setEnabled}
@@ -209,7 +210,7 @@ const Gallery: NextPage = () => {
                     pointer-events-none inline-block h-[26px] w-[26px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
               />
             </Switch>
-            <Switch.Label className="ml-4 font-bold text-white">MY COLLECTION</Switch.Label>
+            <Switch.Label className="ml-4 font-bold">lo mio</Switch.Label>
         </div>
       </Switch.Group>
       {/* <div className="w-full flex flex-row justify-center text-[#202716] font-bold">
@@ -223,7 +224,7 @@ const Gallery: NextPage = () => {
         </a>
       </div> */}
 
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="flex flex-row flex-wrap justify-center mb-10">
         {
             loading ? "loading . . . " : 
             <>
@@ -235,6 +236,7 @@ const Gallery: NextPage = () => {
             </>               
         }
       </div>
+      <Footer />
     </div>
   </div>
   )
