@@ -16,13 +16,13 @@ const NFTCard = ({ nfts }) => {
             ?
             nfts.map((nft, index) => {
                 return (
-                    <div key={nft.token.tokenId} className="border-2 border-white m-[2px] w-10/12 sm:w-5/12 md:w-3/12  border-solid flex flex-row flex-wrap justify-center">
+                    <div key={nft.token.tokenId} className="border border-black m-2 w-10/10 sm:w-5/5 md:w-3/3 border-dashed flex flex-row flex-wrap justify-center">
                         <MediaConfiguration
                         networkId="1"                        
                         strategy={zdkStrategyMainnet}
                         strings={{
-                            CARD_OWNED_BY: "OWNED BY",
-                            CARD_CREATED_BY: "MINTED BY",                           
+                            CARD_OWNED_BY: "↳",
+                            CARD_CREATED_BY: "↳",                           
                         }}                    
                         >
                         <NFTPreview
@@ -33,7 +33,7 @@ const NFTCard = ({ nfts }) => {
                             showPerpetual={false}                           
                         />
                         </MediaConfiguration>
-                        <div className="text-white">
+                        {/* <div className="">
                             { nft.marketsSummary.length === 0 ? (
                             <div className="mb-5">
                                 <div>
@@ -59,14 +59,14 @@ const NFTCard = ({ nfts }) => {
                                 </div>                                  
                             </div>
                             )}
-                        </div>
-                        <AskWrite_disclosure nft={nft} />
+                        </div> */}
+                        {/* <AskWrite_disclosure nft={nft} /> */}
                     </div>
                 )
             }
             ) : (
                 <div>
-                    {"::: NO RESULTS :::"}
+                    {"꒰⁎×﹏×⁎꒱ ༘ؓ ँั๊ྃ"}
                 </div>
             )
             }
