@@ -3,7 +3,7 @@ import { createContext, useContext, useState} from 'react';
 const AppContext = createContext(null);
 
 export function AppWrapper({ children }) {
-   const [ mintQuantity, setMintQuantity ] = useState({ name: 'Quantity', queryValue: '0' });
+   const [ mintQuantity, setMintQuantity ] = useState({ name: '1', queryValue: '1' });
 
    const values = {
       mintQuantity,

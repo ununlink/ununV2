@@ -4,7 +4,7 @@ import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
 import { useAppContext } from "../context/useAppContext"
 
 const sortOptions = [
-   { name: 'QUANTITY', queryValue: '0' },
+   // { name: 'QUANTITY', queryValue: '0' },
    { name: '1', queryValue: '1' },
    { name: '2', queryValue: '2' },
    { name: '3', queryValue: '3' },
@@ -22,18 +22,21 @@ export default function MintQuantity({ colorScheme }) {
    }
    
    return (
-      <div className={`text-[${colorScheme}] z-10 flex flex-row justify-self-end`}>
+      <div className={`text-[${colorScheme}] z-10 flex flex-row justify-self-end  hover:bg-[#eee] w-1/2 border-r`}>
          <Listbox value={mintQuantity} onChange={select}>
             <div className="relative">
 
                { colorScheme === "#c23d05" ? (
-               <Listbox.Button className={`border-[${colorScheme}] hover:bg-[${colorScheme}] focus-visible:ring-offset-[${colorScheme}]
-               w-fit h-full hover:text-black cursor-pointer relative border-solid  border-2 bg-transparent py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-xl`}
+               <Listbox.Button className={`
+               w-fit h-full 
+               relative
+               py-2 pl-3 pr-10
+               focus-visible:ring-offset-[${colorScheme}]
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2`}
                >
                
-               
                <span className="block truncate">{mintQuantity.name}</span>
-               <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+               <span className="pointer-events-none absolute inset-y-0 flex items-center">
                   <SelectorIcon
                      className="h-5 w-5"
                      aria-hidden="true" 
@@ -41,8 +44,11 @@ export default function MintQuantity({ colorScheme }) {
                </span>
                </Listbox.Button>
                ) : (
-               <Listbox.Button className={`border-[${colorScheme}] hover:bg-[${colorScheme}] focus-visible:ring-offset-[${colorScheme}]
-               w-fit h-full hover:text-white cursor-pointer relative border-solid  border-2 bg-transparent py- pl-3 pr-10 text-left  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-xl`}
+               <Listbox.Button className={`
+               w-fit h-full cursor-pointer relative
+               py- pl-3 pr-10
+               focus-visible:ring-offset-[${colorScheme}]
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2`}
                >
                
                
