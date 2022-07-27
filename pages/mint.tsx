@@ -19,11 +19,9 @@ const Mint: NextPage = () => {
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const perMintPrice = 0.001
+    const perMintPrice = 0.0111
     const totalMintPrice = String(mintQuantity.queryValue * perMintPrice)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
-    console.log("mint VAlue", mintValue)
-
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
         addressOrName: "0x230864BaB819A49a3e3CD634EB266F9042d22e82", // Sofja Collection
@@ -35,7 +33,7 @@ const Mint: NextPage = () => {
             console.log("error: ", error)
         },
         onSuccess(data) {
-            console.log("success! --> ", totalSupplyData)
+            // console.log("success! --> ", totalSupplyData)
         }  
     })    
 
@@ -56,7 +54,7 @@ const Mint: NextPage = () => {
             console.log("error", error)
         },
         onSuccess(cancelData, variables, context) {
-            console.log("Success!", cancelData)
+            // console.log("Success!", cancelData)
         },
     })
     
@@ -104,7 +102,7 @@ const Mint: NextPage = () => {
                         { mintWaitLoading == true ? (
                             <div className="p-3 flex flex-col flex-wrap justify-center">           
                                 <div className="text-center">
-                                    mint price: 0.001 Ξ
+                                    mint price: 0.0111 Ξ
                                 </div>                        
                                 <div className="text-center">
                                     {`${totalSupply}` + " minted so far"}
@@ -120,7 +118,7 @@ const Mint: NextPage = () => {
                             ) : (                  
                             <div className="p-3 flex flex-col flex-wrap justify-center text-center">
                             <div className="">
-                                mint price: 0.001 Ξ
+                                mint price: 0.0111 Ξ
                             </div>                
                                 <div className="">
                                     {`${totalSupply}` + " minted so far"}

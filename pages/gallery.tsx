@@ -23,7 +23,7 @@ const client = createClient({
   url: API_MAINNET,
 })
 
-console.log("client", client)
+// console.log("client", client)
 
 const Gallery: NextPage = () => {
 
@@ -48,7 +48,7 @@ const Gallery: NextPage = () => {
         console.log("error: ", error)
     },
     onSuccess(data) {
-        console.log("success! --> ", totalSupplyData)
+        // console.log("success! --> ", totalSupplyData)
     }  
   })
   
@@ -152,23 +152,23 @@ const Gallery: NextPage = () => {
       setLoading(true);
 
       const finalCallArray = generateCalls(numOfCallsRequired);
-      console.log("Finalcallarray", finalCallArray)
+      // console.log("Finalcallarray", finalCallArray)
 
       const finalPromises = generateQueries(finalCallArray, numOfCallsRequired);
-      console.log("finalpromises", finalPromises)
+      // console.log("finalpromises", finalPromises)
 
       const promiseReturns = await runPromises(finalPromises);
-      console.log("promiseReturns", promiseReturns)
+      // console.log("promiseReturns", promiseReturns)
 
       const promiseResults = concatPromiseResultsMainnet(promiseReturns)
 
-      console.log("promiseResults: ", promiseResults);
+      // console.log("promiseResults: ", promiseResults);
 
       setRawData(promiseResults)
 
       ownerFilter(promiseResults)
 
-      console.log("rawData", rawData)
+      // console.log("rawData", rawData)
 
     } catch(error) {
       console.error(error.message)

@@ -26,7 +26,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
     useEffect(() => {
         setPublicIsRendered(publicTxnSuccessStatus)
         openModal();
-        console.log("runnning use effect")
+        // console.log("runnning use effect")
         },
         [publicTxnSuccessStatus]
     )
