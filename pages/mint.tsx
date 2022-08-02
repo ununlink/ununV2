@@ -26,7 +26,7 @@ const Mint: NextPage = () => {
 
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-        addressOrName: "0x230864BaB819A49a3e3CD634EB266F9042d22e82", // Sofja Collection
+        addressOrName: "NUESTRO_CONTRATO", // Our Collection
         contractInterface: editionsABI.abi,
         functionName: 'totalSupply',
         args: [],
@@ -43,7 +43,7 @@ const Mint: NextPage = () => {
 
     // useContractWrite Mint Call
     const { data: mintData, isError: mintError, isLoading: mintLoading, isSuccess: mintSuccess, status: mintStatus, write: mintWrite  } = useContractWrite({
-        addressOrName: "0x230864BaB819A49a3e3CD634EB266F9042d22e82", // Sofja Collection
+        addressOrName: "NUESTRO_CONTRATO", // Our Collection
         contractInterface: editionsABI.abi,
         functionName: 'purchase',
         args: [
@@ -55,15 +55,15 @@ const Mint: NextPage = () => {
         onError(error, variables, context) {
             console.log("error", error)
         },
-        onSuccess(cancelData, variables, context) {
-            console.log("Success!", cancelData)
+        onSuccess(mintData, variables, context) {
+            console.log("Success!", mintData)
         },
     })
     
     // useWaitforTransaction
     const { data: mintWaitData, isError: mintWaitError, isLoading: mintWaitLoading } = useWaitForTransaction({
         hash:  mintData?.hash,
-        onSuccess(holderMintWaitData) {
+        onSuccess(mintWaitData) {
             console.log("txn complete: ", mintWaitData)
             console.log("txn hash: ", mintWaitData.transactionHash)
         }
@@ -79,8 +79,8 @@ const Mint: NextPage = () => {
             <Header />
             <main className="">
                 <div className="flex flex-col flex-wrap items-center">
-                    <div className={`text-center p-3 bg-[#eee] text-black rounded-full`} >
-                    {"[▒▒▒╜░╜╙▒▒▒▒▒▒▒]"}
+                    <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
+                    {"Astrosuka + Sofja - init [UN000]"}
                     </div>
                     <div className="">
                         <div className="text-center p-3" >
@@ -104,10 +104,10 @@ const Mint: NextPage = () => {
                         { mintWaitLoading == true ? (
                             <div className="p-3 flex flex-col flex-wrap justify-center">           
                                 <div className="text-center">
-                                    mint price: 0.001 Ξ
+                                    0.02 Ξ
                                 </div>                        
                                 <div className="text-center">
-                                    {`${totalSupply}` + " minted so far"}
+                                    {`${totalSupply}` + " minted"}
                                 </div>
                                 <div className='flex flex-row justify-center flex-wrap'>
                                     <img
@@ -120,10 +120,10 @@ const Mint: NextPage = () => {
                             ) : (                  
                             <div className="p-3 flex flex-col flex-wrap justify-center text-center">
                             <div className="">
-                                mint price: 0.001 Ξ
+                                0.02 Ξ
                             </div>                
                                 <div className="">
-                                    {`${totalSupply}` + " minted so far"}
+                                    {`${totalSupply}` + " minted"}
                                 </div>
                             </div>
                         )}

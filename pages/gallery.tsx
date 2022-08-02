@@ -64,7 +64,7 @@ const Gallery: NextPage = () => {
     ` 
       query ListCollections {
         tokens(
-          where: {collectionAddresses: "0x230864BaB819A49a3e3CD634EB266F9042d22e82"}
+          where: {collectionAddresses: "0xbcd3B84883964cA48c797E4C64C0e47aD9452133"}
           pagination: {limit: 100}
         ) {
           nodes {
