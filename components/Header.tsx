@@ -30,6 +30,13 @@ export const Header = () => {
             view gallery
           </a>
         </Link>
+        <Link
+          href="/about"
+        >
+          <a className="hover:text-[#0000ff]">
+            ?
+          </a>
+        </Link>
       </div>
 
       <div className="">

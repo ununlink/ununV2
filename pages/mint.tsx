@@ -19,7 +19,7 @@ const Mint: NextPage = () => {
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const perMintPrice = 0.0111
+    const perMintPrice = 0.002
     const totalMintPrice = String(mintQuantity.queryValue * perMintPrice)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
 

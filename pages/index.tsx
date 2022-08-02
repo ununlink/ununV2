@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import Link from 'next/link'
+import { About } from '../components/About'
+import { NFTPlayer } from '../components/NFTPlayer'
 
 const Home: NextPage = () => {
   return (
@@ -15,11 +18,12 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-col items-center">        
-        <h1 className="text-4xl">
+        <h1 className="text-4xl mb-3">
           {'✧unun.'}
         </h1>
+      <NFTPlayer />
       </main>
-
+      
       <Footer />
     </div>
   )
