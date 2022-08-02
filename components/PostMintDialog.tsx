@@ -15,8 +15,8 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
     function openModal() {
         setIsOpen(true)
     }
-
-    const publicLocalTxnHash = publicTxnHashLink ? publicTxnHashLink.hash : ""
+    console.log("WHAT THE FUCK? " + publicTxnHashLink)
+    const publicLocalTxnHash = publicTxnHashLink ? publicTxnHashLink.transactionHash : ""
 
     // const shortenedHash = (hash) => {
     //    let displayHash = hash?.substr(0,4) + "..." + hash?.substr(-4)
@@ -35,82 +35,87 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
         <> 
         {publicTxnLoadingStatus == false && publicIsRendered == "success" ? (    
             <div> 
-                <button
-                    type="button"
-                    onClick={openModal}
-                    className={`border-[${colorScheme}] hover:bg-[${colorScheme}]
-                    mt-10 w-full sm:text-lg relative flex flex-row p-2 pl-3 bg-black border-2 border-solid  hover:text-black`}
+            <button
+                type="button"
+                onClick={openModal}
+                className="mt-3 w-full sm:text-lg relative justify-center flex flex-row p-2 bg-white hover:text-[#00F] rounded-lg"
+            >✧ your mint info ✧
+            </button>        
+        <Transition appear show={isOpen} as={Fragment}>
+            <Dialog as="div" className="relative z-[60]" onClose={closeModal}>
+                <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
                 >
-                    YOUR MINT INFO
-                </button>        
-            <Transition appear show={isOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-[60]" onClose={closeModal}>
+                    <div className="fixed inset-0 backdrop-blur-sm" />
+                </Transition.Child>
+
+                <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex min-h-full items-center justify-center p-4 text-center">
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
+                        enterFrom="opacity-0 scale-95"
+                        enterTo="opacity-100 scale-100"
                         leave="ease-in duration-200"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
+                        leaveFrom="opacity-100 scale-100"
+                        leaveTo="opacity-0 scale-95"
                     >
-                        <div className="fixed inset-0 bg-black bg-opacity-25" />
-                    </Transition.Child>
-
-                    <div className="fixed inset-0 overflow-y-auto">
-                        <div className="flex min-h-full items-center justify-center p-4 text-center">
-                        <Transition.Child
-                            as={Fragment}
-                            enter="ease-out duration-300"
-                            enterFrom="opacity-0 scale-95"
-                            enterTo="opacity-100 scale-100"
-                            leave="ease-in duration-200"
-                            leaveFrom="opacity-100 scale-100"
-                            leaveTo="opacity-0 scale-95"
-                        >
-                        <Dialog.Panel className="w-fit transform overflow-hidden bg-black align-middletransition-all shadow-[0_0px_30px_10px_rgba(0,0,0,1)]" >
-                            <div className="border-white border-4 border-solid my-2 overflow-hidden rounded-none shadow-lg">
-                                <div className="px-8 py-4">
-                                    <div className="text-3xl mb-5">
-                                    MINT SUCCESSFUL
-                                    </div>
-                                    <div className="text-2xl mb-5">
-                                    <a 
-                                        className={` hover:text-[${colorScheme}]`}
-                                        style={{ textDecoration: "underline" }} href={"https://etherscan.io/tx/" + publicLocalTxnHash}
-                                    >
-                                        Transaction Link
-                                    </a>
-                                    </div>
-                                    <div className="text-2xl mb-5">
-                                    <Link href="/gallery">
-                                        <a className={` hover:text-[${colorScheme}]`} style={{ textDecoration: "underline" }}>
-                                            See Your Collection ➝ 
-                                        </a>
-                                    </Link>
-                                    </div>
-                                    <button                                    
-                                        className={` hover:bg-[${colorScheme}] 
-                                        px-4 py-2 text-xl text-white bg-black rounded-none borer-solid border-white border-4 hover:text-black`} 
-                                        onClick={() => {
-                                        closeModal()                          
-                                        }}
-                                    >
-                                        Close
-                                    </button>
+                    <Dialog.Panel className="w-fit transform align-middletransition-all" >
+                        <div className="text-black bg-white border-solid  overflow-hidden rounded-lg shadow-lg shadow-[0_0px_30px_10px_rgba(0,0,0,0.1)] border border-solid border-[#AAA]">
+                            <div className="px-8 py-4">
+                                <div className="mb-3">
+                                {/* ღゝ◡╹)ノ💿 */}
+                                🎉🎉🎉
                                 </div>
-                            </div>                        
-                        </Dialog.Panel>
-                        </Transition.Child>
-                        </div>
+                                <div className="mb-3">
+                                <a 
+                                    className={` hover:text-[${colorScheme}]`}
+                                    href={"https://etherscan.io/tx/" + publicLocalTxnHash}
+                                    target="_blank"
+                                >
+                                    etherscan tx
+                            
+                                </a>
+                                </div>
+                                <div className="mb-3">
+                                <Link href="/gallery">
+                                    <a className={` hover:text-[${colorScheme}]`}>
+                                        go to gallery➝ 
+                                    </a>
+                                </Link>
+                                </div>
+                                <button                                    
+                                    className={` hover:bg-[${colorScheme}] 
+                                    px-2 pb-1 text text-black bg-white rounded-full borer-solid border-white border hover:text-black`} 
+                                    onClick={() => {
+                                    closeModal()                          
+                                    }}
+                                >
+                                    ok
+                                </button>
+                            </div>
+                        </div>                        
+                    </Dialog.Panel>
+                    </Transition.Child>
                     </div>
-                </Dialog>
-            </Transition>
-            </div>  
+                </div>
+            </Dialog>
+        </Transition>
+        </div> 
             ) : (
                 <>
                 </>
             )}
         </>         
     )
+
+
+
+
 }

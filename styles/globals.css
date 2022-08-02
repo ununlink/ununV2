@@ -5,6 +5,8 @@
 html,
 body {
   background-color: whitesmoke;
+  /* background: radial-gradient(circle, hsl(0 0% 100%)  0%, hsl(1 81% 85%) 19%, hsl(0 0% 100%) 65%); */
+
   color: black;
   padding: 0;
   margin: 0;
