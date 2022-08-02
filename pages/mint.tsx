@@ -19,11 +19,9 @@ const Mint: NextPage = () => {
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const perMintPrice = 0.001
+    const perMintPrice = 0.0111
     const totalMintPrice = String(mintQuantity.queryValue * perMintPrice)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
-    console.log("mint VAlue", mintValue)
-
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
         addressOrName: "NUESTRO_CONTRATO", // Our Collection
@@ -35,7 +33,7 @@ const Mint: NextPage = () => {
             console.log("error: ", error)
         },
         onSuccess(data) {
-            console.log("success! --> ", totalSupplyData)
+            // console.log("success! --> ", totalSupplyData)
         }  
     })    
 
@@ -57,7 +55,7 @@ const Mint: NextPage = () => {
         },
         onSuccess(mintData, variables, context) {
             console.log("Success!", mintData)
-        },
+ },
     })
     
     // useWaitforTransaction
@@ -105,6 +103,7 @@ const Mint: NextPage = () => {
                             <div className="p-3 flex flex-col flex-wrap justify-center">           
                                 <div className="text-center">
                                     0.02 Ξ
+
                                 </div>                        
                                 <div className="text-center">
                                     {`${totalSupply}` + " minted"}
@@ -120,7 +119,9 @@ const Mint: NextPage = () => {
                             ) : (                  
                             <div className="p-3 flex flex-col flex-wrap justify-center text-center">
                             <div className="">
+                                
                                 0.02 Ξ
+
                             </div>                
                                 <div className="">
                                     {`${totalSupply}` + " minted"}

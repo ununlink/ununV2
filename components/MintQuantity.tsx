@@ -14,11 +14,10 @@ const sortOptions = [
 
 export default function MintQuantity({ colorScheme }) {
    const { mintQuantity, setMintQuantity } = useAppContext()
-   console.log()
    
    const select = (arg) => {
       setMintQuantity(arg);
-      console.log("logging quantity arg: ", arg)
+      // console.log("logging quantity arg: ", arg)
    }
    
    return (
