@@ -163,7 +163,7 @@ a:hover {
   height: 100%;
   position: absolute;
   z-index: 2;
-  background-color: #4848ff;
+  /* background-color: #4848ff; */
   border-radius: 2px;
 }
 
