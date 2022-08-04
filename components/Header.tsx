@@ -13,16 +13,16 @@ export const Header = () => {
           href="/"
         >
           <a className="hover:text-[#0000ff]">
-            ✧listen.
+          🌿mint
           </a>
         </Link>
-        <Link
+        {/* <Link
           href="/mint"
         >
           <a className="hover:text-[#0000ff]">
           🌿mint
           </a>
-        </Link>
+        </Link> */}
         <Link
           href="/gallery"
         >

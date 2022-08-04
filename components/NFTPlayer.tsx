@@ -1,13 +1,10 @@
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import React from 'react';
-// import H5AudioPlayer from 'react-h5-audio-player';
-// // import 'react-h5-audio-player/lib/styles.less' Use LESS
-// // import 'react-h5-audio-player/src/styles.scss' Use SASS
 
 const playlist = [
   { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/inicio.mp3' },
-  { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/escondido.mp3' },
+  // { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/escondido.mp3' },
 ]
 
 export const NFTPlayer = () => {
@@ -39,7 +36,7 @@ export const NFTPlayer = () => {
         src={playlist[currentTrack].src}
         onPlay={e => console.log("onPlay")}
         // other props here
-        showSkipControls
+        // showSkipControls
         showJumpControls={false}
         onClickNext={handleClickNext}
         onClickPrevious={handleClickPrev}
