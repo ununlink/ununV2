@@ -21,7 +21,7 @@ export default function MintQuantity({ colorScheme }) {
    }
    
    return (
-      <div className="z-10 flex flex-row justify-self-end hover:bg-[#ddd] w-1/2">
+      <div className="z-10 flex flex-row justify-self-end hover:bg-[#eee] w-1/2">
          <Listbox value={mintQuantity} onChange={select}>
             <div className="relative w-full">
                <Listbox.Button className="
@@ -53,7 +53,7 @@ export default function MintQuantity({ colorScheme }) {
                         key={optionIdx}
                         className={({ active }) =>
                            `cursor-pointer relative select-none py-1 pl-4 pr-4 ${
-                              active ? `bg-[#ddd]` : `bg-[#eee] `
+                              active ? `bg-[#eee]` : `bg-[#f5f5f5] `
                            }`
                         }
                         value={option}
