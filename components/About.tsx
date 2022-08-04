@@ -23,7 +23,7 @@ export const About = () => {
         </p>
         
     </div>
-    <div className="w-[100%] flex justify-center mt-5"><img className="w-[100px]" src="https://ipfs.io/ipfs/bafkreifafxg55lte6mpconj7wna3nafnud37liazalnuykee6m4hidq6eu"></img></div>
+    <div className="w-[100%] flex justify-center mt-5"><img className="w-[80px] md:w-[100px]" src="https://ipfs.io/ipfs/bafkreifafxg55lte6mpconj7wna3nafnud37liazalnuykee6m4hidq6eu"></img></div>
 
     </div>
   )
