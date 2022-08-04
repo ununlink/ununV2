@@ -70,32 +70,41 @@ const Mint: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
-            <title>✧unun.mint</title>
+            <title>✧unun.inicio</title>
             <meta name="description" content="✧unun." />
             <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
             <main className="">
-                <div className="flex flex-col flex-wrap items-center">
-                    <div className="drop-shadow-soft border-black border-dashed p-4 w-[20%] min-w-[350px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
+                <div className="flex flex-col flex-wrap items-center mt-[6em] mb-[6em]">
+                    {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
+                    <div className="drop-shadow-soft border-black border-dashed mb-3 w-[20%] min-w-[200px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
                     
                     {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"} */}
-                    <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} >
+                    {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
+                    <div className={`text-center text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"}
                     </div>
-                    <div className="text-center p-3 w-[60%]" >
+                    <div className="text-center pb-3 w-[60%]" >
                         <p>
-                        404 editions electronic music single with generative cover artworks.
+                            ♥
                         </p>
+                        <p>
+                            electronic music single.
+                        </p>
+                        <p>
+                            each edition comes with a unique generative cover artwork.
+                        </p>
+                        <br />
                         <p>
                             all the sounds were synthesized and recorded directly from an access virus ti2 synth to a stereo track.
                         </p>
                     </div>
-                    <div className="flex justify-center border-solid border-[#eee] border drop-shadow-soft">
+                    <div className="flex justify-center ">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
-                        className=" p-3 hover:bg-[#eee] w-1/2 h-full"
+                        className="p-3 hover:bg-[#eee] w-1/2 h-full border-solid border-[#eee] border"
                         onClick={() => mintWrite()}   
                         >
                         mint
@@ -132,7 +141,7 @@ const Mint: NextPage = () => {
 
                         </div>                
                             <div className="">
-                                {`${totalSupply}` + " minted"}
+                                {`${totalSupply}` + "/404 minted"}
                             </div>
                         </div>
                     )}
