@@ -65,7 +65,7 @@ const Gallery: NextPage = () => {
       query ListCollections {
         tokens(
           where: {collectionAddresses: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66"}
-          pagination: {limit: 100}
+          pagination: {limit: 200}
         ) {
           nodes {
             marketsSummary {
@@ -91,6 +91,7 @@ const Gallery: NextPage = () => {
               tokenId
               owner
               collectionAddress
+              metadata
             }
           }
         }

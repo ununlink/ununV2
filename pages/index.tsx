@@ -75,84 +75,18 @@ const Mint: NextPage = () => {
             <meta name="description" content="✧unun." />
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header />
+            {/* <Header /> */}
             <main className="">
                 <div className="flex flex-col flex-wrap items-center">
-                    {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
-                    <div className="mb-3 w-[20%] min-w-[200px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
-                    
-                    {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
-                    {"[UN000] Astrosuka + Sofja - inicio"} */}
-                    {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
                     <div className={`mb-3`} >
-                    {"[UN000] Astrosuka + Sofja - inicio"}
+                    {"✧unun."}
                     </div>
-                    <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
-                        <MintQuantity colorScheme={heavenly}/>
-                        <button 
-                        className="p-1 hover:bg-[#eee] w-1/2 h-full border-solid border-l-[#000] border"
-                        onClick={() => mintWrite()}   
-                        >
-                        mint
-                        </button>
+                    <div className='' >
+                    {"under construction..."}
                     </div>
-                    <PostMintDialog 
-                        publicTxnLoadingStatus={mintWaitLoading}
-                        publicTxnSuccessStatus={mintStatus}
-                        publicTxnHashLink={mintWaitData}
-                        colorScheme={heavenly}
-                    />  
-                    { mintWaitLoading == true ? (
-                        <div className="flex flex-col flex-wrap justify-center">           
-                            <div className="text-center">
-                                0.02 ETH
-
-                            </div>                        
-                            {/* <div className="text-center">
-                                {`${totalSupply}` + " minted"}
-                            </div> */}
-                            <div className='flex flex-row justify-center flex-wrap'>
-                                <img
-                                className="bg-[#000] rounded-full p-1 mt-1" 
-                                width="25px"
-                                src="/SVG-Loaders-master/svg-loaders/tail-spin.svg"
-                                />
-                            </div>
-                        </div>
-                        ) : (                  
-                        <div className="flex flex-col flex-wrap justify-center text-center">
-                        <div className="">
-                            
-                            0.02 ETH
-
-                        </div>                
-                            <div className="">
-                                {`${totalSupply}` + "/404 minted"}
-                            </div>
-                        </div>
-                    )}
-                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >
-                        <p className=''>
-                            ♥
-                        </p>
-                        <p>
-                            electronic music single.
-                        </p>
-                        <p>
-                            each edition (ERC721) comes with a unique generative cover artwork.
-                        </p>
-                        <br />
-                        <p>
-                           {`synthesized and recorded directly from an access virus ti2's stereo output.`}
-                        </p>
-                        <br />
-                        <p className='text-xs'>
-                        powered by <Link href='https://zora.co' ><a target="_blank" className=''>☾ zora ☽</a></Link>
-                        </p>
-                    </div>             
                 </div>
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

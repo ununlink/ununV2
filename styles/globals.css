@@ -17,6 +17,10 @@
   font-family: latitude;
   src: url('../src/fonts/Latitude-Regular.ttf');
 } */
+/* @font-face {
+  font-family: ft88-s;
+  src: url('../src/fonts/FT88-Serif.otf');
+} */
 
 html,
 body {
@@ -29,6 +33,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
   font-family: 'Courier New', Courier, monospace;
+  /* font-family: ft88-s; */
 }
 
 a {
