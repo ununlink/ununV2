@@ -70,6 +70,7 @@ const Mint: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
+                {/* unun-link.eth <3 */}
             <title>✧unun.inicio</title>
             <meta name="description" content="✧unun." />
             <link rel="icon" href="/favicon.ico" />
