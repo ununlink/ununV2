@@ -78,6 +78,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
                                     className={` hover:text-[${colorScheme}]`}
                                     href={"https://etherscan.io/tx/" + publicLocalTxnHash}
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     etherscan tx
                             

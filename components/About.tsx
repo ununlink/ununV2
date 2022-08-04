@@ -3,7 +3,7 @@ import Link from "next/link";
 export const About = () => {
 
   return (
-    <div className=' bg-[#eee] bg-opacity-50 p-4 rounded-lg'>
+    <div className=' bg-[#eee] bg-opacity-50 p-4 rounded-sm'>
         <p className='mb-3'>our own small mutable netlabel for hybrid music & multimedia releases.</p>
         <p className='mb-3'>
         an excuse to collaborate with friends from local scenes, learn new shit and build an autonomous + self sustaining space for experiments.
@@ -14,7 +14,7 @@ export const About = () => {
         <p className='mb-3'>
         {'with <3 from '}
         <Link href='https://goo.gl/maps/rxAJK2uvzUwyVdUr6' >
-            <a target="_blank" className=''>boedo</a>
+            <a target="_blank" rel="noreferrer" className=''>boedo</a>
         </Link>
         </p>
         <p>

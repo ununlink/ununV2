@@ -18,6 +18,9 @@ a {
   color: inherit;
   /* text-decoration: underline; */
 }
+a:hover {
+  color: #0000ff
+}
 
 * {
   box-sizing: border-box;
