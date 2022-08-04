@@ -77,6 +77,8 @@ const Mint: NextPage = () => {
             <Header />
             <main className="">
                 <div className="flex flex-col flex-wrap items-center">
+                    <div className="drop-shadow-soft border-black border-dashed p-4 w-[20%] min-w-[350px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
+                    
                     {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"} */}
                     <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} >
@@ -84,7 +86,7 @@ const Mint: NextPage = () => {
                     </div>
                     <div className="text-center p-3 w-[60%]" >
                         <p>
-                            electronic music single with 404 generative cover artworks.
+                        404 editions electronic music single with generative cover artworks.
                         </p>
                         <p>
                             all the sounds were synthesized and recorded directly from an access virus ti2 synth to a stereo track.

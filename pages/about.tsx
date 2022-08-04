@@ -15,13 +15,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="flex flex-col m-[25%]">        
+      <main className="flex flex-col m-[10%] md:m-[25%]">        
         <h1 className="text-4xl mb-3">
           {'✧unun.'}
         </h1>
+
         <About />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
