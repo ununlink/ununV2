@@ -11,6 +11,10 @@ module.exports = {
         'soft': [
             '-5px -5px 5px rgba(255, 255, 255, 1)',
             '5px 5px 5px rgba(0, 0, 0, 0.15)'
+        ],
+        'hard' : [
+          '-1px -1px 0px rgba(255, 255, 255, 1)',
+            '1px 1px 0px rgba(0, 0, 0, 1)'
         ]
       }
     },

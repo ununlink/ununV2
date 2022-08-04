@@ -87,10 +87,10 @@ const Mint: NextPage = () => {
                     <div className={`text-center text-black rounded-sm mb-3`} >
                     {"[UN000] Astrosuka + Sofja - inicio"}
                     </div>
-                    <div className="flex justify-center mb-3">
+                    <div className="flex justify-center mb-3 bg-[#eee] drop-shadow-hard">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
-                        className="p-3 hover:bg-[#eee] w-1/2 h-full border-solid border-[#eee] border"
+                        className="p-1 hover:bg-[#ddd] w-1/2 h-full border-solid border-l-[#000] border"
                         onClick={() => mintWrite()}   
                         >
                         mint
