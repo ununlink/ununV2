@@ -143,7 +143,7 @@ const Mint: NextPage = () => {
                         </p>
                         <br />
                         <p>
-                            the track was synthesized and recorded directly from an access virus ti2 synth to a stereo track.
+                            synthesized and recorded directly from an access virus ti2's stereo output.
                         </p>
                     </div>             
                 </div>
