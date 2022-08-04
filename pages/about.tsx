@@ -19,9 +19,10 @@ const Home: NextPage = () => {
         <h1 className="text-4xl mb-3">
           {'✧unun.'}
         </h1>
+
         <About />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

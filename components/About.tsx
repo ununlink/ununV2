@@ -18,7 +18,7 @@ export const About = () => {
         </Link>
         </p>
         <p>
-        sofja + astrosuka
+        <Link href='https://twitter.com/_sofffja' ><a target="_blank" className=''>sofja</a></Link> + <Link href='https://twitter.com/astrosuka' ><a target="_blank" className=''>astrosuka</a></Link>
         </p>
     </div>
   )

@@ -236,7 +236,7 @@ const Gallery: NextPage = () => {
             </>               
         }
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </div>
   )
