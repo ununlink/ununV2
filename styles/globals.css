@@ -1,6 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: ft88;
+  src: url('../src/fonts/FT88-Regular.woff');
+}
+@font-face {
+  font-family: abordage;
+  src: url('../src/fonts/Abordage-Regular.ttf');
+}
+@font-face {
+  font-family: director;
+  src: url('../src/fonts/Director-Light.ttf');
+}
+@font-face {
+  font-family: latitude;
+  src: url('../src/fonts/Latitude-Regular.ttf');
+}
 
 html,
 body {
