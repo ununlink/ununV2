@@ -139,7 +139,7 @@ const Mint: NextPage = () => {
                             electronic music single.
                         </p>
                         <p>
-                            each edition comes with a unique generative cover artwork.
+                            each edition (ERC721) comes with a unique generative cover artwork.
                         </p>
                         <br />
                         <p>
