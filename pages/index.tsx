@@ -70,6 +70,7 @@ const Mint: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
+                {/* unun-link.eth <3 */}
             <title>✧unun.inicio</title>
             <meta name="description" content="✧unun." />
             <link rel="icon" href="/favicon.ico" />
@@ -138,11 +139,11 @@ const Mint: NextPage = () => {
                             electronic music single.
                         </p>
                         <p>
-                            each edition comes with a unique generative cover artwork.
+                            each edition (ERC721) comes with a unique generative cover artwork.
                         </p>
                         <br />
                         <p>
-                            all the sounds were synthesized and recorded directly from an access virus ti2 synth to a stereo track.
+                           {`synthesized and recorded directly from an access virus ti2's stereo output.`}
                         </p>
                     </div>             
                 </div>

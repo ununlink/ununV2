@@ -27,7 +27,7 @@ export const Header = () => {
           href="/gallery"
         >
           <a className="hover:text-[#0000ff]">
-            view gallery
+            gallery
           </a>
         </Link>
         <Link
