@@ -39,7 +39,7 @@ const Gallery: NextPage = () => {
 
   // read call to get current totalSupply
   const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-    addressOrName: "0xbcd3B84883964cA48c797E4C64C0e47aD9452133", // Sofja Collection
+    addressOrName: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66", // Sofja Collection
     contractInterface: editionsABI.abi,
     functionName: 'totalSupply',
     args: [],
@@ -64,7 +64,7 @@ const Gallery: NextPage = () => {
     ` 
       query ListCollections {
         tokens(
-          where: {collectionAddresses: "0xbcd3B84883964cA48c797E4C64C0e47aD9452133"}
+          where: {collectionAddresses: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66"}
           pagination: {limit: 100}
         ) {
           nodes {

@@ -19,12 +19,12 @@ const Mint: NextPage = () => {
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const perMintPrice = 0.002
+    const perMintPrice = 0.02
     const totalMintPrice = String(mintQuantity.queryValue * perMintPrice)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-        addressOrName: "0x5ccE81695A12002a9E79B848Be679F5031319232", // Our Collection
+        addressOrName: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66", // Our Collection
         contractInterface: editionsABI.abi,
         functionName: 'totalSupply',
         args: [],
@@ -41,7 +41,7 @@ const Mint: NextPage = () => {
 
     // useContractWrite Mint Call
     const { data: mintData, isError: mintError, isLoading: mintLoading, isSuccess: mintSuccess, status: mintStatus, write: mintWrite  } = useContractWrite({
-        addressOrName: "0x5ccE81695A12002a9E79B848Be679F5031319232", // Our Collection
+        addressOrName: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66", // Our Collection
         contractInterface: editionsABI.abi,
         functionName: 'purchase',
         args: [
@@ -78,11 +78,13 @@ const Mint: NextPage = () => {
             <main className="">
                 <div className="flex flex-col flex-wrap items-center">
                     <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
-                    {"Astrosuka + Sofja - init [UN000]"}
+                    {"[UN000] Astrosuka + Sofja - inicio"}
                     </div>
-                    <div className="">
-                        <div className="text-center p-3" >
-                            de Boedo al mundo
+                    {/* <div className=""> */}
+                        <div className="text-center p-3 w-[60%]" >
+                        {`electronic music single with 404 generative cover artworks by Sofja + Astrosuka.
+\nall the sounds were synthesized and recorded directly from an access virus ti2 synth to a stereo track.
+\ndebut ERC-721 release by ✧unun. music & multimedia platform.`}
                         </div>
                         <div className="flex justify-center border-solid border-[#eee] border">
                             <MintQuantity colorScheme={heavenly}/>
@@ -128,7 +130,7 @@ const Mint: NextPage = () => {
                                 </div>
                             </div>
                         )}
-                    </div>
+                    {/* </div> */}
                 </div>
             </main>
             <Footer />
