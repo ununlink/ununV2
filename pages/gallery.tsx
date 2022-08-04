@@ -39,7 +39,7 @@ const Gallery: NextPage = () => {
 
   // read call to get current totalSupply
   const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-    addressOrName: "0x230864BaB819A49a3e3CD634EB266F9042d22e82", // Sofja Collection
+    addressOrName: "0xbcd3B84883964cA48c797E4C64C0e47aD9452133", // Sofja Collection
     contractInterface: editionsABI.abi,
     functionName: 'totalSupply',
     args: [],

@@ -24,7 +24,7 @@ const Mint: NextPage = () => {
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-        addressOrName: "NUESTRO_CONTRATO", // Our Collection
+        addressOrName: "0x5ccE81695A12002a9E79B848Be679F5031319232", // Our Collection
         contractInterface: editionsABI.abi,
         functionName: 'totalSupply',
         args: [],
@@ -41,7 +41,7 @@ const Mint: NextPage = () => {
 
     // useContractWrite Mint Call
     const { data: mintData, isError: mintError, isLoading: mintLoading, isSuccess: mintSuccess, status: mintStatus, write: mintWrite  } = useContractWrite({
-        addressOrName: "NUESTRO_CONTRATO", // Our Collection
+        addressOrName: "0x5ccE81695A12002a9E79B848Be679F5031319232", // Our Collection
         contractInterface: editionsABI.abi,
         functionName: 'purchase',
         args: [
