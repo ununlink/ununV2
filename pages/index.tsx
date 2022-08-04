@@ -76,7 +76,7 @@ const Mint: NextPage = () => {
             </Head>
             <Header />
             <main className="">
-                <div className="flex flex-col flex-wrap items-center">
+                <div className="flex flex-col flex-wrap items-center mb-20">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
                     <div className="drop-shadow-soft border-black border-dashed p-4 w-[20%] min-w-[350px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
                     

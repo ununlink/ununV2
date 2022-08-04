@@ -43,7 +43,7 @@ export const ElBoton = () => {
                     style={{ display: 'flex', alignItems: 'center' }}
                     type="button"
                   >
-                    {chain.hasIcon && (
+                    {/* {chain.hasIcon && (
                       <div
                         style={{
                           background: chain.iconBackground,
@@ -63,7 +63,7 @@ export const ElBoton = () => {
                         )}
                       </div>
                     )}
-                    {chain.name}
+                    {chain.name} */}
                   </button>
                   <button onClick={openAccountModal} type="button">
                     {account.displayName}
