@@ -77,7 +77,7 @@ const Mint: NextPage = () => {
             </Head>
             <Header />
             <main className="">
-                <div className="flex flex-col flex-wrap items-center mt-[5em] mb-[5em]">
+                <div className="flex flex-col flex-wrap items-center mt-[4em] md:mt-[5em] md:mb-[5em] mb-[4em]">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
                     <div className="drop-shadow-soft mb-3 w-[20%] min-w-[200px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
                     
@@ -131,7 +131,7 @@ const Mint: NextPage = () => {
                             </div>
                         </div>
                     )}
-                    <div className="text-center pb-3 w-[60%]" >
+                    <div className="text-center pb-3 w-[95%] md:w-[60%] text-xs md:text-sm" >
                         <p className='mb-3'>
                             ♥
                         </p>

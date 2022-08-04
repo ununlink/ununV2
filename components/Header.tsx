@@ -41,7 +41,7 @@ export const Header = () => {
 
       <div className="">
         {/* <ConnectButton 
-          accountStatus="address" 
+          accountStatus="avatar" 
           showBalance={false}
         /> */}
         <ElBoton />
