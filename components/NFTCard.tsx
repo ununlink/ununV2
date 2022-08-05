@@ -46,16 +46,19 @@ const NFTCard = ({ nfts }) => {
                             
                             <div>
 
-                            {/* {`${nft.token.metadata.name} `} */}
                             {/* ↳owner{`${nft.token.owner}`} */}
-                            
-                            <Link href={`https://rainbow.me/${nft.token.owner}`}><a target="_blank" rel="noreferrer">↳owner</a>
-                            </Link><span> </span>
-                            <br/>↳view on:<span> </span>
+                            <p className='text-sm'>
+                            ↳owner:<span> </span>
+                            <Link href={`https://etherscan.io/address/${nft.token.owner}`}><a target="_blank" rel="noreferrer">{`${nft.token.owner.slice(-42, -37)}`}...{`${nft.token.owner.slice(38)}`}</a>
+                            </Link>
+                            </p>
+                            <p className='text-sm'>
+                            ↳view on:<span> </span>
                             <Link href={`https://zora.co/collections/${nft.token.collectionAddress}/${nft.token.tokenId}`}><a target="_blank" rel="noreferrer">zora</a>
                             </Link><span> </span>
                             <Link href={`https://opensea.io/assets/ethereum/${nft.token.collectionAddress}/${nft.token.tokenId}`}><a target="_blank" rel="noreferrer">opensea</a>
                             </Link>
+                            </p>
                             </div>
                         
                         {/* <audio

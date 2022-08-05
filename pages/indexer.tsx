@@ -173,7 +173,7 @@ const [collectionForm, setCollectionForm] = useState("0xCa21d4228cDCc68D4e23807E
   )
 
   return (
-    <div className='flex flex-col justify-center h-screen min-h-screen'>
+    <div className='flex flex-col justify-center h-screen min-h-screen text-black'>
       <Header />
       <main className="w-full flex flex-row flex-wrap justify-center self-center items-center">        
       <UserNFTs userAddress={currentUserAddress} nfts={currentUserNFTs} collectionInfo={currentCollectionNFTs} setCollectionCB={setCollectionForm} />

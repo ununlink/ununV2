@@ -149,7 +149,7 @@ const Mint: NextPage = () => {
                         </p>
                         <br />
                         <p>
-                           {`synthesized and recorded directly from an access virus ti2's stereo output.`}
+                           {`synthesized and recorded directly from an access virus ti2's output to a single stereo track.`}
                         </p>
                         <br />
                         <p className='text-xs'>
