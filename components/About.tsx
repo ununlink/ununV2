@@ -4,7 +4,7 @@ export const About = () => {
 
   return (
     <div>
-    <div className=' bg-[#eee] bg-opacity-50 p-4 rounded-sm'>
+    <div className='bg-[#f5f5f5] p-4 drop-shadow-hard'>
         <p className='mb-3'>our own small mutable netlabel for hybrid music & multimedia releases.</p>
         <p className='mb-3'>
         an excuse to collaborate with friends from local scenes, learn new shit and build an autonomous + self sustaining space for experiments.
@@ -23,7 +23,7 @@ export const About = () => {
         </p>
         
     </div>
-    <div className="drop-shadow-soft mb-3 w-[100%] flex justify-center mt-3"><img className="w-[100px]" src="https://ipfs.io/ipfs/bafkreifafxg55lte6mpconj7wna3nafnud37liazalnuykee6m4hidq6eu"></img></div>
+    <div className="w-[100%] flex justify-center mt-5"><img className="w-[80px] md:w-[100px]" src="https://ipfs.io/ipfs/bafkreifafxg55lte6mpconj7wna3nafnud37liazalnuykee6m4hidq6eu"></img></div>
 
     </div>
   )

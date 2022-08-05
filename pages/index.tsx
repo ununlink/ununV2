@@ -77,7 +77,7 @@ const Mint: NextPage = () => {
             </Head>
             <Header />
             <main className="">
-                <div className="flex flex-col flex-wrap items-center mt-[4em] md:mt-[5em] md:mb-[5em] mb-[4em]">
+                <div className="flex flex-col flex-wrap items-center">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
                     
                     <div className="drop-shadow-soft mb-3 w-[20%] min-w-[200px] text-center">
@@ -88,13 +88,13 @@ const Mint: NextPage = () => {
                     {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"} */}
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
-                    <div className={`text-center text-black rounded-sm mb-3`} >
+                    <div className={`mb-3`} >
                     {"[UN000] Astrosuka + Sofja - inicio"}
                     </div>
-                    <div className="flex justify-center mb-3">
+                    <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
-                        className="p-3 hover:bg-[#eee] w-1/2 h-full border-solid border-[#eee] border"
+                        className="p-1 hover:bg-[#eee] w-1/2 h-full border-solid border-l-[#000] border"
                         onClick={() => mintWrite()}   
                         >
                         mint
@@ -107,7 +107,7 @@ const Mint: NextPage = () => {
                         colorScheme={heavenly}
                     />  
                     { mintWaitLoading == true ? (
-                        <div className="p-3 flex flex-col flex-wrap justify-center">           
+                        <div className="flex flex-col flex-wrap justify-center">           
                             <div className="text-center">
                                 0.02 ETH
 
@@ -124,7 +124,7 @@ const Mint: NextPage = () => {
                             </div>
                         </div>
                         ) : (                  
-                        <div className="p-3 flex flex-col flex-wrap justify-center text-center">
+                        <div className="flex flex-col flex-wrap justify-center text-center">
                         <div className="">
                             
                             0.02 ETH
@@ -135,8 +135,8 @@ const Mint: NextPage = () => {
                             </div>
                         </div>
                     )}
-                    <div className="text-center pb-3 w-[95%] md:w-[60%] text-xs md:text-sm" >
-                        <p className='mb-3'>
+                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >
+                        <p className=''>
                             ♥
                         </p>
                         <p>
@@ -150,6 +150,10 @@ const Mint: NextPage = () => {
                         <br />
                         <p>
                            {`synthesized and recorded directly from an access virus ti2's stereo output.`}
+                        </p>
+                        <br />
+                        <p className='text-xs'>
+                        powered by <Link href='https://zora.co' ><a target="_blank" className=''>☾ zora ☽</a></Link>
                         </p>
                     </div>             
                 </div>
