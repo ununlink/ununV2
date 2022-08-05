@@ -153,7 +153,7 @@ const Mint: NextPage = () => {
                         </p>
                         <br />
                         <p className='text-xs'>
-                        powered by <Link href='https://zora.co' ><a target="_blank" className=''>☾ zora ☽</a></Link>
+                        powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
                         </p>
                     </div>             
                 </div>
