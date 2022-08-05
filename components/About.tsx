@@ -4,7 +4,7 @@ export const About = () => {
 
   return (
     <div>
-    <div className='bg-[#f5f5f5] p-4 drop-shadow-hard'>
+    <div className='bg-[#f5f5f5] p-4 drop-shadow-hard text-sm'>
         <p className='mb-3'>our own small mutable netlabel for hybrid music & multimedia releases.</p>
         <p className='mb-3'>
         an excuse to collaborate with friends from local scenes, learn new shit and build an autonomous + self sustaining space for experiments.
