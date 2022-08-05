@@ -80,7 +80,7 @@ const Mint: NextPage = () => {
                 <div className="flex flex-col flex-wrap items-center">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
                     
-                    <div className="drop-shadow-soft mb-3 w-[20%] min-w-[200px] text-center">
+                    <div className=" mb-3 w-[20%] min-w-[200px] text-center">
                         <Image  width={500}
                             height={500} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" />
                     </div>
