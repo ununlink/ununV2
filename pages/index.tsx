@@ -77,10 +77,10 @@ const Mint: NextPage = () => {
             </Head>
             {/* <Header /> */}
             <main className="">
-                <div className="flex flex-col flex-wrap items-center">
+                <div className="flex flex-col flex-wrap items-center mb-10 md:mb-0">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
                     
-                    <div className=" mb-3 w-[20%] min-w-[200px] text-center">
+                    <div className="w-[20%] min-w-[200px] text-center mb-1">
                         <Image  width={500}
                             height={500} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" />
                     </div>
@@ -88,7 +88,7 @@ const Mint: NextPage = () => {
                     {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"} */}
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
-                    <div className={`mb-3 text-lg`} >
+                    <div className={`mb-2 text-lg`} >
                     {"[UN000] Astrosuka + Sofja - inicio"}
                     </div>
                     <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
