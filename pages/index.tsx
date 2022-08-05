@@ -75,7 +75,7 @@ const Mint: NextPage = () => {
             <meta name="description" content="✧unun." />
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header />
+            {/* <Header /> */}
             <main className="">
                 <div className="flex flex-col flex-wrap items-center">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
@@ -84,7 +84,7 @@ const Mint: NextPage = () => {
                     {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"} */}
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
-                    <div className={`mb-3`} >
+                    <div className={`mb-3 text-lg`} >
                     {"[UN000] Astrosuka + Sofja - inicio"}
                     </div>
                     <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
@@ -152,7 +152,7 @@ const Mint: NextPage = () => {
                     </div>             
                 </div>
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

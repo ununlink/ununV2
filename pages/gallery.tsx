@@ -197,7 +197,7 @@ const Gallery: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      {/* <Header /> */}
       <div className="flex flex-row flex-wrap justify-center mt-20 mb-20 pb-10">
       <Switch.Group>
         {/* <div className=" mt-20 mb-5 w-full flex flex-row justify-center items-center">

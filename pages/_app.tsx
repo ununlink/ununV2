@@ -15,6 +15,7 @@ import {
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { AppWrapper } from '../context/useAppContext';
+import Layout from '../components/Layout';
 
 
 const { chains, provider } = configureChains(
@@ -46,9 +47,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           accentColor: "none",
           accentColorForeground: "white"
       })}>
-        <AppWrapper>
-          <Component {...pageProps} />
-        </AppWrapper>
+        <Layout>
+          <AppWrapper>
+            <Component {...pageProps} />
+          </AppWrapper>
+        </Layout>
       </RainbowKitProvider>
     </WagmiConfig>        
   )

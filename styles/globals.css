@@ -168,7 +168,7 @@ a:hover {
 }
 
 .rhap_progress-bar-show-download {
-  background-color: rgba(221, 221, 221, 0.5);
+  background-color: #000;
 }
 
 .rhap_download-progress {
@@ -187,9 +187,9 @@ a:hover {
   height: 20px;
   margin-left: -10px;
   top: -8px;
-  background: #868686;
+  background: #000;
   border-radius: 50px;
-  box-shadow: rgba(134, 134, 134, 0.5) 0 0 5px;
+  /* box-shadow: rgba(134, 134, 134, 0.5) 0 0 5px; */
 }
 
 .rhap_controls-section {
@@ -209,7 +209,7 @@ a:hover {
   font-size: 26px;
   width: 26px;
   height: 26px;
-  color: #868686;
+  color: #000;
   margin-right: 6px;
 }
 
@@ -222,7 +222,7 @@ a:hover {
 
 .rhap_main-controls-button {
   margin: 0 3px;
-  color: #868686;
+  color: #000;
   font-size: 35px;
   width: 35px;
   height: 35px;
@@ -246,7 +246,7 @@ a:hover {
   font-size: 26px;
   width: 26px;
   height: 26px;
-  color: #868686;
+  color: #000;
   margin-right: 6px;
 }
 
@@ -286,10 +286,10 @@ a:hover {
   margin-left: -6px;
   left: 0;
   top: -4px;
-  background: #868686;
+  background: #aaa;
   opacity: 0.9;
   border-radius: 50px;
-  box-shadow: rgba(134, 134, 134, 0.5) 0 0 3px;
+  /* box-shadow: rgba(134, 134, 134, 0.5) 0 0 3px; */
   cursor: pointer;
 }
 .rhap_volume-indicator:hover {

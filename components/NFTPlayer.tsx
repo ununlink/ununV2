@@ -1,5 +1,4 @@
 import AudioPlayer from 'react-h5-audio-player';
-// import '../styles/globals.css';
 import React from 'react';
 
 const playlist = [
