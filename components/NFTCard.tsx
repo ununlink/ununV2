@@ -2,6 +2,9 @@ import { NFTPreview, MediaConfiguration } from "@zoralabs/nft-components";
 import { Networks, Strategies } from "@zoralabs/nft-hooks"
 import { CreateAsk } from "./Asks/CreateAsk";
 import AskWrite_disclosure from "./Asks/AskWrite_disclosure";
+import Image from "next/image";
+import Link from 'next/link';
+
 
 const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
     Networks.MAINNET
@@ -15,9 +18,11 @@ const NFTCard = ({ nfts }) => {
             nfts && nfts.length > 0
             ?
             nfts.map((nft, index) => {
+                console.log("que es")
                 return (
-                    <div key={nft.token.tokenId} className="border border-black m-2 w-10/10 sm:w-5/5 md:w-3/3 border-dashed flex flex-row flex-wrap justify-center">
-                        <MediaConfiguration
+                    <div key={nft.token.tokenId} className="border border-black p-3 m-2 w-10/10 sm:w-5/5 md:w-3/3 border-dashed flex flex-col flex-wrap justify-center">
+                       
+                        {/* <MediaConfiguration
                         networkId="1"                        
                         strategy={zdkStrategyMainnet}
                         strings={{
@@ -32,7 +37,35 @@ const NFTCard = ({ nfts }) => {
                             showBids={false}
                             showPerpetual={false}                           
                         />
-                        </MediaConfiguration>
+                        </MediaConfiguration> */}
+                            <Link href={`https://ipfs.io/ipfs/${nft.token.metadata.image.slice(7)}`}><a target="_blank" rel="noreferrer"><Image
+                                src={`https://ipfs.io/ipfs/${nft.token.metadata.image.slice(7)}`}
+                                width={300}
+                                height={300}
+                            /></a></Link>
+                            
+                            <div>
+
+                            {/* {`${nft.token.metadata.name} `} */}
+                            {/* ↳owner{`${nft.token.owner}`} */}
+                            
+                            <Link href={`https://rainbow.me/${nft.token.owner}`}><a target="_blank" rel="noreferrer">↳owner</a>
+                            </Link><span> </span>
+                            <br/>↳view on:<span> </span>
+                            <Link href={`https://zora.co/collections/${nft.token.collectionAddress}/${nft.token.tokenId}`}><a target="_blank" rel="noreferrer">zora</a>
+                            </Link><span> </span>
+                            <Link href={`https://opensea.io/assets/ethereum/${nft.token.collectionAddress}/${nft.token.tokenId}`}><a target="_blank" rel="noreferrer">opensea</a>
+                            </Link>
+                            </div>
+                        
+                        {/* <audio
+                            controls
+                            src={`https://ipfs.io/ipfs/${nft.token.metadata.animation_url.slice(7)}`}
+                        >
+
+                        </audio> */}
+                        
+
                         {/* <div className="">
                             { nft.marketsSummary.length === 0 ? (
                             <div className="mb-5">

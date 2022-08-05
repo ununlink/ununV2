@@ -91,6 +91,7 @@ const Gallery: NextPage = () => {
               tokenId
               owner
               collectionAddress
+              metadata
             }
           }
         }
@@ -162,7 +163,7 @@ const Gallery: NextPage = () => {
 
       const promiseResults = concatPromiseResultsMainnet(promiseReturns)
 
-      // console.log("promiseResults: ", promiseResults);
+      console.log("promiseResults: ", promiseResults);
 
       setRawData(promiseResults)
 

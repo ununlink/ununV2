@@ -72,14 +72,18 @@ const Mint: NextPage = () => {
             <Head>
                 {/* unun-link.eth <3 */}
             <title>✧unun.inicio</title>
-            <meta name="description" content="✧unun." />
+            <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
             {/* <Header /> */}
             <main className="">
                 <div className="flex flex-col flex-wrap items-center">
                     {/* <div className={`mt-3 text-center p-3 bg-[#f5f5f5] drop-shadow-soft text-black rounded-full`} > */}
-                    <div className="mb-3 w-[20%] min-w-[200px]"><img src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y"></img></div>
+                    
+                    <div className="drop-shadow-soft mb-3 w-[20%] min-w-[200px] text-center">
+                        <Image  width={500}
+                            height={500} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" />
+                    </div>
                     
                     {/* <div className={`mt-3 text-center p-3 bg-[#eee] text-black rounded-sm`} >
                     {"[UN000] Astrosuka + Sofja - inicio"} */}
@@ -139,7 +143,9 @@ const Mint: NextPage = () => {
                             electronic music single.
                         </p>
                         <p>
-                            each edition (ERC721) comes with a unique generative cover artwork.
+                            each edition (<Link href='https://etherscan.io/address/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66' >
+                            <a target="_blank" rel="noreferrer" className=''>ERC721</a>
+        </Link>) comes with a unique generative cover artwork.
                         </p>
                         <br />
                         <p>
