@@ -15,8 +15,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Header /> */}
-      <main className="flex flex-col m-[10%] md:m-[25%]">        
-        <h1 className="text-4xl mb-3 drop-shadow-hard">
+      <main className="flex flex-col m-[10%] md:m-[25%] mb-20">        
+        <h1 className="text-3xl mb-3 drop-shadow-hard">
           {'✧unun.'}
         </h1>
 
