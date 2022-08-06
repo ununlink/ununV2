@@ -15,7 +15,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
     function openModal() {
         setIsOpen(true)
     }
-    console.log("WHAT THE FUCK? " + publicTxnHashLink)
+    // console.log("WHAT THE FUCK? " + publicTxnHashLink)
     const publicLocalTxnHash = publicTxnHashLink ? publicTxnHashLink.transactionHash : ""
 
     // const shortenedHash = (hash) => {

@@ -70,7 +70,6 @@ const Mint: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
-                {/* unun-link.eth <3 */}
             <title>✧unun.inicio</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
@@ -104,10 +103,7 @@ const Mint: NextPage = () => {
                             <div className="text-center">
                                 0.02 ETH
 
-                            </div>                        
-                            {/* <div className="text-center">
-                                {`${totalSupply}` + " minted"}
-                            </div> */}
+                            </div>
                             <div className='flex flex-row justify-center flex-wrap'>
                                 <img
                                 className="bg-[#000] rounded-full p-1 mt-1" 
@@ -137,8 +133,7 @@ const Mint: NextPage = () => {
                         </p>
                         <p>
                             each edition (<Link href='https://etherscan.io/address/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66' >
-                            <a target="_blank" rel="noreferrer" className=''>ERC721</a>
-        </Link>) comes with a unique generative cover artwork.
+                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
                         </p>
                         <br />
                         <p>
