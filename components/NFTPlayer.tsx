@@ -37,9 +37,11 @@ export const NFTPlayer = () => {
         // other props here
         // showSkipControls
         showJumpControls={false}
+        // customAdditionalControls={[]}
         onClickNext={handleClickNext}
         onClickPrevious={handleClickPrev}
         onEnded={handleEnd}
+        // layout="horizontal-reverse" 
       />
   )
 }
