@@ -32,9 +32,9 @@ export default function MintQuantity({ colorScheme }) {
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2"
                   >
                   <span className="block truncate">{mintQuantity.name}</span>
-                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 pb-0.5">
                      <SelectorIcon
-                        className="h-5 w-5"
+                        className="h-4 w-4"
                         aria-hidden="true" 
                      />
                   </span>
@@ -52,7 +52,7 @@ export default function MintQuantity({ colorScheme }) {
                         <Listbox.Option
                         key={optionIdx}
                         className={({ active }) =>
-                           `cursor-pointer relative select-none py-1 pl-4 pr-4 ${
+                           `cursor-pointer relative select-none py-1 pl-3 ${
                               active ? `bg-[#eee]` : `bg-[#f5f5f5] `
                            }`
                         }
@@ -66,7 +66,7 @@ export default function MintQuantity({ colorScheme }) {
                                  {option.name}
                                  </span>
                                  {selected ? (
-                                 <span className="absolute inset-y-0 r-0 flex items-center pl-3 text-black">
+                                 <span className="absolute inset-y-0 r-0 flex items-center pl-6 text-black">
                                     <CheckIcon className="h-4 w-4" aria-hidden="true" />
                                  </span>
                                  ) : null}
