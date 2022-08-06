@@ -23,7 +23,7 @@ export const About = () => {
             <Link href='https://twitter.com/_sofffja' ><a target="_blank" className=''>sofja</a></Link> + <Link href='https://twitter.com/astrosuka' ><a target="_blank" className=''>astrosuka</a></Link>
           </p>
           <p className="">
-            <Link href='https://twitter.com/_sofffja' ><a target="_blank" className=''>tw</a></Link> | <Link href='https://twitter.com/astrosuka' ><a target="_blank" className=''>git</a></Link>
+            <Link href='https://twitter.com/ununlink' ><a target="_blank" className=''>tw</a></Link> | <Link href='https://github.com/ununlink/unun' ><a target="_blank" className=''>git</a></Link>
           </p>
         </div>
         
