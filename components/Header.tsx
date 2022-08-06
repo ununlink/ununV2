@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { ElBoton } from "./CustomButton";
+import DarkButton from "./DarkModeButton";
 
 
 export const Header = () => {
@@ -12,7 +13,7 @@ export const Header = () => {
         <Link
           href="/"
         >
-          <a className="hover:text-[#0000ff]">
+          <a className="filter-none">
           🌿 mint
           </a>
         </Link>
@@ -26,17 +27,18 @@ export const Header = () => {
         <Link
           href="/gallery"
         >
-          <a className="hover:text-[#0000ff]">
+          <a className="filter-none">
             gallery
           </a>
         </Link>
         <Link
           href="/about"
         >
-          <a className="hover:text-[#0000ff]">
+          <a className="filter-none">
             ?
           </a>
         </Link>
+        {/* <DarkButton /> */}
       </div>
 
       <div className="">
