@@ -10,21 +10,21 @@ export const NFTPlayer = () => {
   const [currentTrack, setTrackIndex] = React.useState(0)
 
   const handleClickNext = () => {
-      console.log('click next')
+      // console.log('click next')
         setTrackIndex((currentTrack) =>
             currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
         );
     };
 
     const handleClickPrev = () => {
-      console.log('click prev')
+      // console.log('click prev')
         setTrackIndex((currentTrack) =>
             currentTrack > 1 ? currentTrack - 1 : 0
         );
     };
   
   const handleEnd = () => {
-    console.log('end')
+    // console.log('end')
     setTrackIndex((currentTrack) =>
             currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
         );

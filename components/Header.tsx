@@ -17,13 +17,6 @@ export const Header = () => {
           🌿 mint
           </a>
         </Link>
-        {/* <Link
-          href="/mint"
-        >
-          <a className="hover:text-[#0000ff]">
-          🌿mint
-          </a>
-        </Link> */}
         <Link
           href="/gallery"
         >
@@ -38,7 +31,6 @@ export const Header = () => {
             ?
           </a>
         </Link>
-        {/* <DarkButton /> */}
       </div>
 
       <div className="">
