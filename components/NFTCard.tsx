@@ -12,10 +12,8 @@ const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
 
 const STYLE_OVERRIDE = {
     theme: {
-      bodyFont: `
-              font-family: courier;
-          `,
-        titleFont: `font-family: courier;`,
+    bodyFont: `font-family: courier;`,
+    titleFont: `font-family: courier;`,
     borderStyle: "dashed 1px",
     defaultBorderRadius: 0,
     preferredIPFSGateway: "https://ipfs.io/ipfs/",
