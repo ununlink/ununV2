@@ -3,14 +3,12 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import editionsABI from "@zoralabs/nft-drop-contracts/dist/artifacts/ERC721Drop.sol/ERC721Drop.json"
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import { useState } from 'react'
 import { ethers, BigNumber } from 'ethers'
 import { useContractWrite, useContractRead, useWaitForTransaction } from 'wagmi'
 import { useAppContext } from "../context/useAppContext"
 import MintQuantity from '../components/MintQuantity'
 import PostMintDialog from '../components/PostMintDialog'
+import { ourCollection, tokenPrice } from '../public/Constants'
 
 const heavenly = "#ff0000"
 
@@ -19,12 +17,11 @@ const Mint: NextPage = () => {
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const perMintPrice = 0.02
-    const totalMintPrice = String(mintQuantity.queryValue * perMintPrice)
+    const totalMintPrice = String(mintQuantity.queryValue * tokenPrice)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-        addressOrName: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66", // Our Collection
+        addressOrName: ourCollection,
         contractInterface: editionsABI.abi,
         functionName: 'totalSupply',
         args: [],
@@ -41,7 +38,7 @@ const Mint: NextPage = () => {
 
     // useContractWrite Mint Call
     const { data: mintData, isError: mintError, isLoading: mintLoading, isSuccess: mintSuccess, status: mintStatus, write: mintWrite  } = useContractWrite({
-        addressOrName: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66", // Our Collection
+        addressOrName: ourCollection,
         contractInterface: editionsABI.abi,
         functionName: 'purchase',
         args: [
@@ -132,7 +129,7 @@ const Mint: NextPage = () => {
                             electronic music single.
                         </p>
                         <p>
-                            each edition (<Link href='https://etherscan.io/token/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66' >
+                            each edition (<Link href={`https://etherscan.io/token/${ourCollection}`} >
                             <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
                         </p>
                         <br />

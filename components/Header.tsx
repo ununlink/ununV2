@@ -1,8 +1,5 @@
 import Link from "next/link";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { ElBoton } from "./CustomButton";
-import DarkButton from "./DarkModeButton";
-
 
 export const Header = () => {
 
@@ -34,10 +31,6 @@ export const Header = () => {
       </div>
 
       <div className="">
-        {/* <ConnectButton 
-          accountStatus="avatar" 
-          showBalance={false}
-        /> */}
         <ElBoton />
       </div>
       

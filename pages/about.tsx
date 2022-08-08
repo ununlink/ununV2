@@ -1,9 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import Link from 'next/link'
 import { About } from '../components/About'
 
 const Home: NextPage = () => {
@@ -14,7 +10,6 @@ const Home: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Header /> */}
       <main className="flex flex-col m-[10%] md:m-[25%] mb-20">        
         <h1 className="text-3xl mb-3 drop-shadow-hard text-[#f5f5f5]">
           {'✧unun.'}
@@ -22,7 +17,6 @@ const Home: NextPage = () => {
 
         <About />
       </main>
-      {/* <Footer /> */}
     </div>
   )
 }

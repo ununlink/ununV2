@@ -1,19 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-
 import NFTCard from "../components/NFTCard"
-import Link from "next/link"
 import { useContractRead, useAccount } from "wagmi"
-import { NFTPreview, MediaConfiguration } from "@zoralabs/nft-components"
-import { Networks, NFTFetchConfiguration, Strategies, useNFT, useNFTMetadata, MediaFetchAgent } from "@zoralabs/nft-hooks"
 import editionsABI from "@zoralabs/nft-drop-contracts/dist/artifacts/ERC721Drop.sol/ERC721Drop.json"
 import { BigNumber } from "ethers"
 import { useState, useEffect } from 'react'
 import { createClient } from "urql"
-import { Switch } from "@headlessui/react"
+import { ourCollection } from "../public/Constants";
 
 // APIs
 const API_MAINNET = "https://api.zora.co/graphql"
@@ -22,8 +15,6 @@ const API_RINKEBY = "https://indexer-dev-rinkeby.zora.co/v1/graphql"
 const client = createClient({
   url: API_MAINNET,
 })
-
-// console.log("client", client)
 
 const Gallery: NextPage = () => {
 
@@ -39,7 +30,7 @@ const Gallery: NextPage = () => {
 
   // read call to get current totalSupply
   const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-    addressOrName: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66", // Sofja Collection
+    addressOrName: ourCollection, 
     contractInterface: editionsABI.abi,
     functionName: 'totalSupply',
     args: [],
@@ -48,7 +39,6 @@ const Gallery: NextPage = () => {
         console.log("error: ", error)
     },
     onSuccess(data) {
-        // console.log("success! --> ", totalSupplyData)
     }  
   })
   
@@ -64,7 +54,7 @@ const Gallery: NextPage = () => {
     ` 
       query ListCollections {
         tokens(
-          where: {collectionAddresses: "0x532f7DB02D2ebE12f2CDdfAcDa807FD9B2D96F66"}
+          where: {collectionAddresses: "${ourCollection}"}
           pagination: {limit: 100}
         ) {
           nodes {
@@ -153,23 +143,16 @@ const Gallery: NextPage = () => {
       setLoading(true);
 
       const finalCallArray = generateCalls(numOfCallsRequired);
-      // console.log("Finalcallarray", finalCallArray)
 
       const finalPromises = generateQueries(finalCallArray, numOfCallsRequired);
-      // console.log("finalpromises", finalPromises)
 
       const promiseReturns = await runPromises(finalPromises);
-      // console.log("promiseReturns", promiseReturns)
 
       const promiseResults = concatPromiseResultsMainnet(promiseReturns)
-
-      // console.log("promiseResults: ", promiseResults);
 
       setRawData(promiseResults)
 
       ownerFilter(promiseResults)
-
-      // console.log("rawData", rawData)
 
     } catch(error) {
       console.error(error.message)
@@ -198,38 +181,7 @@ const Gallery: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Header /> */}
       <div className="flex flex-row flex-wrap justify-center mt-20 mb-20 pb-10">
-      <Switch.Group>
-        {/* <div className=" mt-20 mb-5 w-full flex flex-row justify-center items-center">
-            <Switch.Label className="mr-4 font-bold">todo</Switch.Label>
-            <Switch
-              checked={enabled}
-              onChange={setEnabled}
-              className={`${enabled ? `bg-[#4A524C]` : `bg-[#B8C5C9]`}
-                  relative inline-flex h-[30px] w-[66px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
-              >
-              <span className="sr-only">Use setting</span>
-              <span
-                  aria-hidden="true"
-                  className={`${enabled ? 'translate-x-9' : 'translate-x-0'}
-                    pointer-events-none inline-block h-[26px] w-[26px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
-              />
-            </Switch>
-            <Switch.Label className="ml-4 font-bold">lo mio</Switch.Label>
-        </div> */}
-      </Switch.Group>
-      {/* <div className="w-full flex flex-row justify-center text-[#202716] font-bold">
-        <a 
-            style={{ textDecoration: "none" }}
-            href="https://zora.co/collections/0x7e6663E45Ae5689b313e6498D22B041f4283c88A"
-        >
-            <button className="text-center w-32 p-2 border-4 border-[#202716] bg-[#726e48] hover:bg-[#202716] hover:text-[#726e48] border-solid ">
-              ZORA
-            </button>   
-        </a>
-      </div> */}
-
       <div className="flex flex-row flex-wrap justify-center">
         {
             loading ? "loading . . . " : 
@@ -242,7 +194,6 @@ const Gallery: NextPage = () => {
             </>               
         }
       </div>
-      {/* <Footer /> */}
     </div>
   </div>
   )

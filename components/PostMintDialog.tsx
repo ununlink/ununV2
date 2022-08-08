@@ -15,18 +15,11 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
     function openModal() {
         setIsOpen(true)
     }
-    // console.log("WHAT THE FUCK? " + publicTxnHashLink)
     const publicLocalTxnHash = publicTxnHashLink ? publicTxnHashLink.transactionHash : ""
-
-    // const shortenedHash = (hash) => {
-    //    let displayHash = hash?.substr(0,4) + "..." + hash?.substr(-4)
-    //    return displayHash
-    // }
 
     useEffect(() => {
         setPublicIsRendered(publicTxnSuccessStatus)
         openModal();
-        // console.log("runnning use effect")
         },
         [publicTxnSuccessStatus]
     )
