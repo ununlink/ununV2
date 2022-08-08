@@ -1,6 +1,6 @@
 import { NFTPreview, MediaConfiguration } from "@zoralabs/nft-components";
 import { Networks, Strategies } from "@zoralabs/nft-hooks"
-import { ourCollection } from "../public/Constants";
+import { ourCollection } from "../constants/Constants";
 
 const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
     Networks.MAINNET
@@ -24,7 +24,7 @@ const STYLE_OVERRIDE = {
     useCollectionTag: true,
     },
   };
-  
+
 const NFTCard = ({ nfts }) => {
 
     return (

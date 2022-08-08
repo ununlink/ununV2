@@ -8,7 +8,7 @@ import { useContractWrite, useContractRead, useWaitForTransaction } from 'wagmi'
 import { useAppContext } from "../context/useAppContext"
 import MintQuantity from '../components/MintQuantity'
 import PostMintDialog from '../components/PostMintDialog'
-import { ourCollection, tokenPrice } from '../public/Constants'
+import { ourCollection, tokenPrice } from '../constants/Constants'
 
 const heavenly = "#ff0000"
 

@@ -6,7 +6,7 @@ import editionsABI from "@zoralabs/nft-drop-contracts/dist/artifacts/ERC721Drop.
 import { BigNumber } from "ethers"
 import { useState, useEffect } from 'react'
 import { createClient } from "urql"
-import { ourCollection } from "../public/Constants";
+import { ourCollection } from "../constants/Constants";
 
 // APIs
 const API_MAINNET = "https://api.zora.co/graphql"
