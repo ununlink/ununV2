@@ -4,7 +4,7 @@
 To download and have your local copy of this minting page + gallery you can follow this steps!
 
 ```powershell
-git clone [https://github.com/ununlink/unun.git](https://github.com/ununlink/unun.git)
+git clone https://github.com/ununlink/unun.git
 cd unun
 npm install
 ```
