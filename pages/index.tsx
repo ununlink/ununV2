@@ -132,7 +132,7 @@ const Mint: NextPage = () => {
                             electronic music single.
                         </p>
                         <p>
-                            each edition (<Link href='https://etherscan.io/address/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66' >
+                            each edition (<Link href='https://etherscan.io/token/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66' >
                             <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
                         </p>
                         <br />
