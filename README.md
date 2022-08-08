@@ -2,16 +2,15 @@
 
 
 To download and have your local copy of this minting page + gallery you can follow this steps!
-
-```powershell
+> clone repository and install dependencies
+```
 git clone https://github.com/ununlink/unun.git
 cd unun
 npm install
 ```
 
 If you are using vscode you can open the folder by running: 
-
-```powershell
+```
 code .
 ```
 
