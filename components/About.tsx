@@ -12,6 +12,12 @@ export const About = () => {
         <p className='mb-6'>
         a platform that adapts itself to our artistic needs, not the other way around.
         </p>
+      <p className="mb-6">
+        <Link  href='https://mirror.xyz/unun-link.eth' >
+          <a target="_blank" rel="noreferrer">(+info)</a>
+        </Link>
+      </p>
+
         <p className='mb-3'>
         {'with <3 from '}
         <Link href='https://goo.gl/maps/rxAJK2uvzUwyVdUr6' >
