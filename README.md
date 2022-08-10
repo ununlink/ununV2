@@ -13,13 +13,9 @@ npm install
      
 If you are using vscode you can open the folder by running `code .` 
     
-> replace with your contract address:
+> replace with your contract address and mint price:
 
-/pages/index.tsx lines 27 and 44
-
-/pages/gallery.tsx lines 42 and 67
-
-/components/NFTCard.tsx line 81  
+/constants/Constants.tsx
 
 > replace URL of audio track: 
 
