@@ -12,7 +12,8 @@ cd unun
 npm install
 ```     
      
-If you are using VS Code you can open the folder by running `code .`. Or you can open the files in any text editor.
+If you are using VS Code you can open the folder by running `code .`
+You can also open the files in any text editor.
     
 > replace with your contract address and mint price:
 
@@ -51,7 +52,8 @@ cd unun
 npm install
 ```     
 
-Si estás usando VS Code puedes abrir la carpeta con el comando `code .`. O puedes abrir los archivos en cualquier editor de texto.
+Si estás usando VS Code puedes abrir la carpeta con el comando `code .`
+También puedes abrir los archivos en cualquier editor de texto.
     
 > reemplazar con la dirección de tu contrato y el precio de cada token:
 
