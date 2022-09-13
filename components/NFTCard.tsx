@@ -1,6 +1,8 @@
 import { NFTPreview, MediaConfiguration } from "@zoralabs/nft-components";
-import { Networks, Strategies } from "@zoralabs/nft-hooks"
+import { MediaFetchAgent, Networks, Strategies } from "@zoralabs/nft-hooks"
 import { ourCollection } from "../constants/Constants";
+
+
 
 const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
     Networks.MAINNET
@@ -27,17 +29,19 @@ const STYLE_OVERRIDE = {
 
 const NFTCard = ({ nfts }) => {
 
+    console.log("what info is coming in: ", nfts);
+
     return (
         <>
             {
             nfts && nfts.length > 0
             ?
             nfts.map((nft, index) => {
-
+                console.log("how many nfts: ", nfts.length)
                 return (
-                 
-                    <div key={nft.token.tokenId} className="w-10/10 sm:w-5/5 md:w-3/3 flex flex-col flex-wrap justify-center">
-                       
+                
+                    <div key={nft} className="w-10/10 sm:w-5/5 md:w-3/3 flex flex-col flex-wrap justify-center">
+                    
                         <MediaConfiguration
                         style={STYLE_OVERRIDE}
                         networkId="1"                        
@@ -45,18 +49,18 @@ const NFTCard = ({ nfts }) => {
                         strings={{
                             CARD_OWNED_BY: "↳",
                             CARD_CREATED_BY: "↳",
-                                                     
+                                                    
                         }}   
-                                         
+                                        
                         >
                         <NFTPreview
                             
-                            href={`https://zora.co/collections/${ourCollection}/${nft.token.tokenId}`}
-                            contract={nft.token.collectionAddress}
-                            id={nft.token.tokenId}
+                            href={`https://zora.co/collections/${ourCollection}/${nft}`}
+                            contract={ourCollection}
+                            id={nft}
                             showBids={false}
                             showPerpetual={false} 
-                                              
+                                            
                         />
                         </MediaConfiguration>
                     </div>

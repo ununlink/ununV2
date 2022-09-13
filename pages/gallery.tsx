@@ -8,6 +8,10 @@ import { useState, useEffect } from 'react'
 import { createClient } from "urql"
 import { ourCollection } from "../constants/Constants";
 
+import useSWR from 'swr';
+import request, { RequestDocument } from "graphql-request";
+
+
 // APIs
 const API_MAINNET = "https://api.zora.co/graphql"
 const API_RINKEBY = "https://indexer-dev-rinkeby.zora.co/v1/graphql"
@@ -23,10 +27,14 @@ const Gallery: NextPage = () => {
   const [rawData, setRawData] = useState([]);
   const [userData, setUserData] = useState([])
   const [enabled, setEnabled] = useState(false);
+
+  const [nftTotalSupply, setNFTTotalSupply] = useState(0);
+  const [growingData, setGrowingData] = useState();
+  const [nftData, setNFTData] = useState([]);
   
-  // hook to get the current account of user
-  const { address, connector, isConnecting, isConnected, status} = useAccount(); 
-  const currentUserAddress = address ? address.toLowerCase() : ""
+  // // hook to get the current account of user
+  // const { address, connector, isConnecting, isConnected, status} = useAccount(); 
+  // const currentUserAddress = address ? address.toLowerCase() : ""
 
   // read call to get current totalSupply
   const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
@@ -44,135 +52,37 @@ const Gallery: NextPage = () => {
   
   const totalSupply = totalSupplyData ? BigNumber.from(totalSupplyData).toString() : "loading"
   const totalSupplyNumber = Number(totalSupply)
-  const numOfCallsRequired = Math.ceil(totalSupplyNumber / 100)
 
-  const generateCalls = (numCalls) => {
-      const callArray = [];
-
-      for (let i = 0; i < numCalls; i++ ) {
-      let call = 
-    ` 
-      query ListCollections {
-        tokens(
-          where: {collectionAddresses: "${ourCollection}"}
-          pagination: {limit: 100}
-        ) {
-          nodes {
-            marketsSummary {
-              marketType
-              tokenId
-              properties {
-                ... on V3Ask {
-                  sellerFundsRecipient
-                  findersFeeBps
-                  askPrice {
-                    nativePrice {
-                      decimal
-                      currency {
-                        name
-                      }
-                    }
-                  }
-                  v3AskStatus
-                }
-              }
-            }
-            token {
-              tokenId
-              owner
-              collectionAddress
-              metadata
-            }
-          }
-        }
-      }
-    `
-
-    callArray.push(call)
-    } 
-    return callArray
+  // gets allstarz total supply and sets it to state
+  const getTotalSupply = () => {
+    const totalSupply = totalSupplyData ? Number(totalSupplyData) : 0
+    setNFTTotalSupply(totalSupply);
+    console.log("total supply", totalSupply)
   }
-  
-  const generateQueries = (array, length) => {
-    const promises = []
-    for (let i = 0; i < length; i++) {
-    promises.push(client.query(array[i]).toPromise())
+
+  // creates a sequential array of all the tokenIds we want to render and sets it to state
+  const createNFTPreviewData = () => {
+    const updatedData = [];
+    for ( let i = 0; i < nftTotalSupply ; i++) {
+      updatedData.push(String(i + 1));
+      setNFTData(updatedData);
     }
-    return promises
+    console.log("updated data", updatedData)
   }
   
-  const runPromises = async (inputArray) => {
-    return Promise.all(inputArray).then((results) => {
-      return [results]
-    })
-  }
-  
-  const concatPromiseResultsRinkeby = (multipleArrays) => {
-    const masterArray = []
-    for (let i = 0; i < multipleArrays[0].length; i++ ) {
-      for (let j = 0; j < multipleArrays[0][i].data.Token.length; j++ ) {
-          masterArray.push(multipleArrays[0][i].data.Token[j])
-      }
-    } return masterArray
-  }
-
-  const concatPromiseResultsMainnet = (multipleArrays) => {
-    const masterArray = []
-    for (let i = 0; i < multipleArrays[0].length; i++ ) {
-      for (let j = 0; j < multipleArrays[0][i].data.tokens.nodes.length; j++ ) {
-          masterArray.push(multipleArrays[0][i].data.tokens.nodes[j])
-      }
-    } return masterArray
-  }
-
-  const ownerFilter = (rawData) => {
-    const filteredArray = []
-      const filteredNFTs = rawData.filter((nft) => {
-          if (nft.owner === currentUserAddress) {
-            filteredArray.push(nft)
-          }
-          return filteredArray
-      });
-    setUserData(filteredArray)
-  }
-
-  const fetchData = async () => {
-    console.log("fetching data")
-
-    try {
-      setLoading(true);
-
-      const finalCallArray = generateCalls(numOfCallsRequired);
-
-      const finalPromises = generateQueries(finalCallArray, numOfCallsRequired);
-
-      const promiseReturns = await runPromises(finalPromises);
-
-      const promiseResults = concatPromiseResultsMainnet(promiseReturns)
-
-      setRawData(promiseResults)
-
-      ownerFilter(promiseResults)
-
-    } catch(error) {
-      console.error(error.message)
-    }  finally {
-      setLoading(false)
-    }
-  }
+  useEffect(() => {
+    getTotalSupply(),
+    [totalSupplyData]
+  })  
 
   useEffect(() => {
-    fetchData();
-    },
-    []
-  )
-
-  useEffect(() => {
-    if(!!rawData)
-    ownerFilter(rawData);
-    },
-    [currentUserAddress]
-  )
+    if (!!nftData) {
+      createNFTPreviewData();
+    }},
+    [
+      nftTotalSupply
+    ]
+  )  
 
   return (
     <div>
@@ -190,7 +100,7 @@ const Gallery: NextPage = () => {
               loading ? "loading . . . " : 
               <>
               { enabled === false ? ( 
-              <NFTCard  nfts={rawData} />
+              <NFTCard  nfts={nftData}  />
               ) : (
               <NFTCard  nfts={userData} />
               )}
