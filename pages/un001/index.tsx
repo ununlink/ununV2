@@ -120,18 +120,17 @@ const Mint: NextPage = () => {
                                 {`${totalSupply}` + "/404 minted"}
                             </div>
                             <Link
-                            href="/un001/gallery"
-                        >
-                            <div
-                                className="hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
+                                href="/un002/gallery"
                             >
-                                View Gallery
-                            </div>
-                        </Link>                            
+                                <div
+                                    className="hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
+                                >
+                                    View Gallery
+                                </div>
+                            </Link>                                         
                         </div>
                     )}
-                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >
-
+                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >           
                         <p className=''>
                             ♥
                         </p>
@@ -144,7 +143,7 @@ const Mint: NextPage = () => {
                         </p>
                         <br />
                         <p>
-                           {`synthesized and recorded directly from an access virus ti2's output to a single stereo track.`}
+                            {`synthesized and recorded directly from an access virus ti2's output to a single stereo track.`}
                         </p>
                         <br />
                         <p className='text-xs'>

@@ -15,21 +15,21 @@ const Home: NextPage = () => {
             <main className="">
                 <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0">
                     <Link
-                        href="/un001"
+                        href="/un000"
                     >
                         <div 
                         className=" hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
                         >
-                            un001
+                            un000
                         </div>
                     </Link>
                     <Link
-                        href="/un002"
+                        href="/un001"
                     >
                         <div
                             className="hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
                         >
-                            un002
+                            un001
                         </div>
                     </Link>                    
                 </div>

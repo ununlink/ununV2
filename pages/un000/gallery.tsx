@@ -66,7 +66,7 @@ const Gallery: NextPage = () => {
                 CARD_CREATED_BY: "↳",              
               }}
             >
-              <NFTPreview             
+              <NFTPreview                 
                 contract={ourCollection} 
                 id={nft?.nft?.tokenId} 
                 href={`https://zora.co/collections/${ourCollection}/${nft?.nft?.tokenId}`}
