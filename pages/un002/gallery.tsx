@@ -57,6 +57,7 @@ const Gallery: NextPage = () => {
           {data && data.map((nft: NFTObject) =>
             
             <MediaConfiguration
+              key={`${nft?.nft?.tokenId}-${ourCollection}`} 
               style={STYLE_OVERRIDE}
               networkId="1"
               strategy={zdkStrategyMainnet}
@@ -65,8 +66,7 @@ const Gallery: NextPage = () => {
                 CARD_CREATED_BY: "↳",              
               }}
             >
-              <NFTPreview 
-                key={`${nft?.nft?.tokenId}-${ourCollection}`} 
+              <NFTPreview             
                 contract={ourCollection} 
                 id={nft?.nft?.tokenId} 
                 href={`https://zora.co/collections/${ourCollection}/${nft?.nft?.tokenId}`}
