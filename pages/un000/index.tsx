@@ -120,7 +120,7 @@ const Mint: NextPage = () => {
                                 {`${totalSupply}` + "/404 minted"}
                             </div>
                             <Link
-                            href="/un001/gallery"
+                            href="/un000/gallery"
                         >
                             <div
                                 className="hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
