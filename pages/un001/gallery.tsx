@@ -1,89 +1,47 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NFTCard from "../../components/NFTCard"
-import { useContractRead, useAccount } from "wagmi"
-import editionsABI from "@zoralabs/nft-drop-contracts/dist/artifacts/ERC721Drop.sol/ERC721Drop.json"
-import { BigNumber } from "ethers"
-import { useState, useEffect } from 'react'
-import { createClient } from "urql"
-import { ourCollection } from "../../constants/Constants";
+import { useTokensQuery } from '../../hooks/useTokensQuery'
+import { ourCollection } from '../../constants/Constants'
+import { NFTObject, Networks, Strategies } from '@zoralabs/nft-hooks'
+import { NFTPreview, MediaConfiguration } from '@zoralabs/nft-components'
+import { NFTGridLoadMore } from '../../components/NFTGridLoadMore'
 
-import useSWR from 'swr';
-import request, { RequestDocument } from "graphql-request";
+const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
+  Networks.MAINNET
+)
 
-
-// APIs
-const API_MAINNET = "https://api.zora.co/graphql"
-const API_RINKEBY = "https://indexer-dev-rinkeby.zora.co/v1/graphql"
-
-const client = createClient({
-  url: API_MAINNET,
-})
+const STYLE_OVERRIDE = {
+  theme: {
+  bodyFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
+  titleFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
+  borderStyle: "dashed 1px",
+  defaultBorderRadius: 0,
+  preferredIPFSGateway: "https://ipfs.io/ipfs/",
+  showOwner: false,
+  showCreator: false,
+  previewCard: {
+      background: '#f5f5f5'
+  },
+  padding: '3px',
+  showTxnLinks: true,
+  useEnsResolution: true,
+  useCollectionTag: true,
+  },
+};
 
 const Gallery: NextPage = () => {
-
-  const [nftsMinted, setNFTsMinted] = useState();
-  const [loading, setLoading] = useState(false);
-  const [rawData, setRawData] = useState([]);
-  const [userData, setUserData] = useState([])
-  const [enabled, setEnabled] = useState(false);
-
-  const [nftTotalSupply, setNFTTotalSupply] = useState(0);
-  const [growingData, setGrowingData] = useState();
-  const [nftData, setNFTData] = useState([]);
-  
-  // // hook to get the current account of user
-  // const { address, connector, isConnecting, isConnected, status} = useAccount(); 
-  // const currentUserAddress = address ? address.toLowerCase() : ""
-
-  // read call to get current totalSupply
-  const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-    addressOrName: ourCollection, 
-    contractInterface: editionsABI.abi,
-    functionName: 'totalSupply',
-    args: [],
-    watch: true,
-    onError(error) {
-        console.log("error: ", error)
-    },
-    onSuccess(data) {
-    }  
+  const {
+    data,
+    isReachingEnd,
+    isValidating,
+    handleLoadMore,
+  } = useTokensQuery({
+    contractAddress: ourCollection,
+    pageSize: 24
   })
+
+  console.log('isReachingEnd', isReachingEnd)
   
-  const totalSupply = totalSupplyData ? BigNumber.from(totalSupplyData).toString() : "loading"
-  const totalSupplyNumber = Number(totalSupply)
-
-  // gets allstarz total supply and sets it to state
-  const getTotalSupply = () => {
-    const totalSupply = totalSupplyData ? Number(totalSupplyData) : 0
-    setNFTTotalSupply(totalSupply);
-    console.log("total supply", totalSupply)
-  }
-
-  // creates a sequential array of all the tokenIds we want to render and sets it to state
-  const createNFTPreviewData = () => {
-    const updatedData = [];
-    for ( let i = 0; i < nftTotalSupply ; i++) {
-      updatedData.push(String(i + 1));
-      setNFTData(updatedData);
-    }
-    console.log("updated data", updatedData)
-  }
-  
-  useEffect(() => {
-    getTotalSupply(),
-    [totalSupplyData]
-  })  
-
-  useEffect(() => {
-    if (!!nftData) {
-      createNFTPreviewData();
-    }},
-    [
-      nftTotalSupply
-    ]
-  )  
-
   return (
     <div>
       <Head>
@@ -91,24 +49,41 @@ const Gallery: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-row flex-wrap justify-center mt-20 mb-20 pb-10">
+      <div className='flex flex-col justify-around' style={{paddingTop: 100, paddingBottom: 200}}>
         <div className='w-[100%] text-center'>
-          view on <a href="https://zora.co/collections/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66" target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
+          view on <a href={`https://market.zora.co/collections/${ourCollection}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
+        </div>        
+        <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0">
+          {data && data.map((nft: NFTObject) =>
+            
+            <MediaConfiguration
+              style={STYLE_OVERRIDE}
+              networkId="1"
+              strategy={zdkStrategyMainnet}
+              strings={{
+                CARD_OWNED_BY: "↳",
+                CARD_CREATED_BY: "↳",              
+              }}
+            >
+              <NFTPreview 
+                key={`${nft?.nft?.tokenId}-${ourCollection}`} 
+                contract={ourCollection} 
+                id={nft?.nft?.tokenId} 
+                href={`https://zora.co/collections/${ourCollection}/${nft?.nft?.tokenId}`}
+                showBids={false}
+                showPerpetual={false}
+              />
+            </MediaConfiguration>
+          )}
         </div>
-        <div className="flex flex-row flex-wrap justify-center">
-          {
-              loading ? "loading . . . " : 
-              <>
-              { enabled === false ? ( 
-              <NFTCard  nfts={nftData}  />
-              ) : (
-              <NFTCard  nfts={userData} />
-              )}
-              </>               
-          }
-        </div>
+        {/* IF YOU WANT A BUTTON: <button onClick={handleLoadMore}>Load More</button>*/}
+        <NFTGridLoadMore
+          showObserver
+          isValidating={isValidating}
+          handleLoadMore={handleLoadMore}
+        />
+      </div>
     </div>
-  </div>
   )
 }
 

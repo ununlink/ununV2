@@ -119,10 +119,7 @@ const Mint: NextPage = () => {
                             <div className="">
                                 {`${totalSupply}` + "/404 minted"}
                             </div>
-                        </div>
-                    )}
-                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >
-                        <Link
+                            <Link
                             href="/un001/gallery"
                         >
                             <div
@@ -130,7 +127,11 @@ const Mint: NextPage = () => {
                             >
                                 View Gallery
                             </div>
-                        </Link>
+                        </Link>                            
+                        </div>
+                    )}
+                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >
+
                         <p className=''>
                             ♥
                         </p>
