@@ -37,7 +37,7 @@ const Gallery: NextPage = () => {
     handleLoadMore,
   } = useTokensQuery({
     contractAddress: ourCollection,
-    pageSize: 24
+    pageSize: 16
   })
 
   console.log('isReachingEnd', isReachingEnd)
