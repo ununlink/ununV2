@@ -1,9 +1,8 @@
 import AudioPlayer from 'react-h5-audio-player';
 import React from 'react';
+import { albums } from '../constants/Constants';
 
-const playlist = [
-  { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/inicio.mp3' },
-]
+const playlist = albums[0]
 
 export const NFTPlayer = () => {
   const [currentTrack, setTrackIndex] = React.useState(0)
@@ -29,7 +28,9 @@ export const NFTPlayer = () => {
       <AudioPlayer
         src={playlist[currentTrack].src}
         // other props here
+        header={playlist[currentTrack].title}
         showJumpControls={false}
+        showSkipControls={true}
         onClickNext={handleClickNext}
         onClickPrevious={handleClickPrev}
         onEnded={handleEnd}

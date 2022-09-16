@@ -98,7 +98,7 @@ const Mint: NextPage = () => {
                     { mintWaitLoading == true ? (
                         <div className="flex flex-col flex-wrap justify-center">           
                             <div className="text-center">
-                                0.02 ETH
+                                {tokenPrice * mintQuantity.queryValue} ETH
 
                             </div>
                             <div className='flex flex-row justify-center flex-wrap'>
@@ -113,7 +113,7 @@ const Mint: NextPage = () => {
                         <div className="flex flex-col flex-wrap justify-center text-center">
                         <div className="">
                             
-                            0.02 ETH
+                        {tokenPrice * mintQuantity.queryValue} ETH
 
                         </div>                
                             <div className="">
