@@ -17,8 +17,6 @@ import { publicProvider } from 'wagmi/providers/public';
 import { AppWrapper } from '../context/useAppContext';
 import Layout from '../components/Layout';
 
-import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
-import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
 
 const { chains, provider } = configureChains(
   [chain.mainnet],
@@ -39,8 +37,6 @@ const wagmiClient = createClient({
   provider
 })
 
-export const strategy = new ZDKFetchStrategy('1', 'https://api.zora.co/graphql')
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
@@ -51,13 +47,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           accentColor: "none",
           accentColorForeground: "white"
       })}>
-        <NFTFetchConfiguration networkId="1" strategy={strategy}>
         <Layout>
           <AppWrapper>
             <Component {...pageProps} />
           </AppWrapper>
         </Layout>
-        </NFTFetchConfiguration>
       </RainbowKitProvider>
     </WagmiConfig>        
   )
