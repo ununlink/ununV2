@@ -40,6 +40,11 @@ const Gallery: NextPage = () => {
     pageSize: 16
   })
 
+  /// aqui es donde puedes accesar la metadata de cada nft
+  console.log("data: ", data)
+  ///
+
+  /// this provides a front end check for the infinite scroll check
   console.log('isReachingEnd', isReachingEnd)
   
   return (
