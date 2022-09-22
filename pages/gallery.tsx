@@ -181,7 +181,7 @@ const Gallery: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-row flex-wrap justify-center mt-10 mb-20 pb-10">
+      <div className="flex flex-row flex-wrap justify-center mt-20 mb-20 pb-10">
         <div className='w-[100%] text-center'>
           view on <a href="https://zora.co/collections/0x532f7db02d2ebe12f2cddfacda807fd9b2d96f66" target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
         </div>

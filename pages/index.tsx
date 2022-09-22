@@ -113,7 +113,7 @@ const Mint: NextPage = () => {
                         <div className="flex flex-col flex-wrap justify-center text-center">
                         <div className="">
                             
-                        {tokenPrice * mintQuantity.queryValue} ETH
+                            {tokenPrice * mintQuantity.queryValue} ETH
 
                         </div>                
                             <div className="">
