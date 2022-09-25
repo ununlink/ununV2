@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useTokensQuery } from '../../hooks/useTokensQuery'
-import { ourCollection } from '../../constants/Constants'
+import { ourCollection2 } from '../../constants/Constants'
 import { NFTObject, Networks, Strategies } from '@zoralabs/nft-hooks'
 import { NFTPreview, MediaConfiguration } from '@zoralabs/nft-components'
 import { NFTGridLoadMore } from '../../components/NFTGridLoadMore'
+
+const contract = ourCollection2
 
 const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
   Networks.MAINNET
@@ -36,10 +38,15 @@ const Gallery: NextPage = () => {
     isValidating,
     handleLoadMore,
   } = useTokensQuery({
-    contractAddress: ourCollection,
-    pageSize: 16
+    contractAddress: contract,
+    pageSize: 12
   })
 
+  /// aqui es donde puedes accesar la metadata de cada nft
+  console.log("data: ", data)
+  ///
+
+  /// this provides a front end check for the infinite scroll check
   console.log('isReachingEnd', isReachingEnd)
   
   return (
@@ -49,15 +56,15 @@ const Gallery: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='flex flex-col justify-around' style={{paddingTop: 100, paddingBottom: 200}}>
+      <div className='flex flex-col justify-around pb-20 my-20'>
         <div className='w-[100%] text-center'>
-          view on <a href={`https://market.zora.co/collections/${ourCollection}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
+          view on <a href={`https://market.zora.co/collections/${contract}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
         </div>        
-        <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0">
+        <div className="flex flex-row flex-wrap justify-center items-center mb-10 md:mb-0">
           {data && data.map((nft: NFTObject) =>
             
             <MediaConfiguration
-              key={`${nft?.nft?.tokenId}-${ourCollection}`} 
+              key={`${nft?.nft?.tokenId}-${contract}`} 
               style={STYLE_OVERRIDE}
               networkId="1"
               strategy={zdkStrategyMainnet}
@@ -66,10 +73,10 @@ const Gallery: NextPage = () => {
                 CARD_CREATED_BY: "↳",              
               }}
             >
-              <NFTPreview             
-                contract={ourCollection} 
+              <NFTPreview                 
+                contract={contract} 
                 id={nft?.nft?.tokenId} 
-                href={`https://zora.co/collections/${ourCollection}/${nft?.nft?.tokenId}`}
+                href={`https://zora.co/collections/${contract}/${nft?.nft?.tokenId}`}
                 showBids={false}
                 showPerpetual={false}
               />

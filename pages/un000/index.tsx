@@ -11,17 +11,19 @@ import PostMintDialog from '../../components/PostMintDialog'
 import { ourCollection, tokenPrice } from '../../constants/Constants'
 
 const heavenly = "#ff0000"
+const price = tokenPrice
+const contract = ourCollection
 
 const Mint: NextPage = () => {
 
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const totalMintPrice = String(mintQuantity.queryValue * tokenPrice)
+    const totalMintPrice = String(mintQuantity.queryValue * price)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-        addressOrName: ourCollection,
+        addressOrName: contract,
         contractInterface: editionsABI.abi,
         functionName: 'totalSupply',
         args: [],
@@ -38,7 +40,7 @@ const Mint: NextPage = () => {
 
     // useContractWrite Mint Call
     const { data: mintData, isError: mintError, isLoading: mintLoading, isSuccess: mintSuccess, status: mintStatus, write: mintWrite  } = useContractWrite({
-        addressOrName: ourCollection,
+        addressOrName: contract,
         contractInterface: editionsABI.abi,
         functionName: 'purchase',
         args: [
@@ -98,7 +100,7 @@ const Mint: NextPage = () => {
                     { mintWaitLoading == true ? (
                         <div className="flex flex-col flex-wrap justify-center">           
                             <div className="text-center">
-                                0.02 ETH
+                            {price * mintQuantity.queryValue} ETH
 
                             </div>
                             <div className='flex flex-row justify-center flex-wrap'>
@@ -111,11 +113,11 @@ const Mint: NextPage = () => {
                         </div>
                         ) : (                  
                         <div className="flex flex-col flex-wrap justify-center text-center">
-                        <div className="">
-                            
-                            0.02 ETH
+                            <div className="">
+                                
+                            {price * mintQuantity.queryValue} ETH
 
-                        </div>                
+                            </div>             
                             <div className="">
                                 {`${totalSupply}` + "/404 minted"}
                             </div>
@@ -139,7 +141,7 @@ const Mint: NextPage = () => {
                             electronic music single.
                         </p>
                         <p>
-                            each edition (<Link href={`https://etherscan.io/token/${ourCollection}`} >
+                            each edition (<Link href={`https://etherscan.io/token/${contract}`} >
                             <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
                         </p>
                         <br />

@@ -12,10 +12,22 @@ body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  font-family: Courier, 'Courier New', monospace;
+  /* font-family: Courier, 'Courier New', monospace; */
+
+font-family: neue-haas-grotesk-display, sans-serif;
+font-weight: 400;
+font-style: normal;  
+font-size: 15px;
+
+/* @apply text-sm */
 }
 
 a {
+  /* font-family: freight-big-pro,serif;
+font-weight: 400;
+font-style: normal; */
+  font-style: italic;
+
   color: inherit;
   /* text-decoration: underline; */
   @apply drop-shadow-glow
@@ -25,8 +37,31 @@ a:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-family: swear-display,serif;
+  font-weight: 200;
+  font-style: normal;
+  
+  /* font-size: xx-large; */
+  font-size: 3em;
+  letter-spacing: -0.05em;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.form-line {
+  @apply flex md:flex-row flex-col
+}
+
+.form-name {
+  @apply md:w-[30%] w-full p-2
+  
+}
+
+.form-input {
+  @apply bg-white md:w-[70%] w-full p-1 m-1
 }
 
 .contenedor-nft {
@@ -68,11 +103,11 @@ a:hover {
 }
 
 .rhap_header {
-  margin-bottom: 10px;
+  margin-bottom: 1em !important;
 }
 
 .rhap_footer {
-  margin-top: 5px;
+  margin-top: 1em !important;
 }
 
 .rhap_main {
@@ -82,7 +117,7 @@ a:hover {
 }
 
 .rhap_stacked .rhap_controls-section {
-  margin-top: 8px;
+  margin-top: 0.5em !important;
 }
 
 .rhap_horizontal {
@@ -128,7 +163,7 @@ a:hover {
 }
 
 .rhap_time {
-  color: #444 !important; 
+  color: #000 !important; 
   font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
@@ -148,12 +183,12 @@ a:hover {
   height: 100%;
   position: absolute;
   z-index: 2;
-  background-color: #ffffff00 !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
   border-radius: 0px !important;
 }
 
 .rhap_progress-bar-show-download {
-  background-color: #ddd !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .rhap_download-progress {
@@ -172,7 +207,7 @@ a:hover {
   height: 10px !important;
   margin-left: -7px !important;
   top: -2px !important;
-  background: #666 !important;
+  background: #777 !important;
   border-radius: 50px;
   box-shadow: rgba(134, 134, 134, 0) 0 0 5px !important;
 }
@@ -195,7 +230,7 @@ a:hover {
   width: 20px !important;
   height: 20px !important;
   color: #666 !important;
-  margin-right: 6px;
+  margin-right: 0px !important;
 }
 
 .rhap_main-controls {
@@ -206,7 +241,7 @@ a:hover {
 }
 
 .rhap_main-controls-button {
-  margin: 0 3px;
+  margin: 0 0.1em !important;
   color: #666 !important;
   font-size: 25px;
   width: 25px;
@@ -232,7 +267,7 @@ a:hover {
   width: 20px!important;
   height: 20px!important;
   color: #666!important;
-  margin-right: 6px;
+  margin-right: 0px !important;
 }
 
 .rhap_volume-container {

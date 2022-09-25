@@ -43,7 +43,8 @@ export const NFTGridLoadMore = ({
   }, [handleLoadMore, showObserver])
 
   return (
-    <div className={`w-full relative mb-4 ${isValidating && 'validating'}`}>
+    // <div className={`w-full relative mb-4 ${isValidating && 'validating'}`}>
+    <div className={`${isValidating && 'validating'}`}>
       {!isValidating && (
         <LoadMoreObserver
           className="pointer-events-none"
@@ -51,7 +52,7 @@ export const NFTGridLoadMore = ({
         />
       )}
       <div
-        className='justify-center align-center flex py-4 w-full flex-row h-4'
+        className='justify-center flex flex-row py-4 h-1'
         aria-hidden
       >
         {isValidating && <span>...loading...</span>}

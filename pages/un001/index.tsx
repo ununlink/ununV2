@@ -8,20 +8,22 @@ import { useContractWrite, useContractRead, useWaitForTransaction } from 'wagmi'
 import { useAppContext } from "../../context/useAppContext"
 import MintQuantity from '../../components/MintQuantity'
 import PostMintDialog from '../../components/PostMintDialog'
-import { ourCollection, tokenPrice } from '../../constants/Constants'
+import { ourCollection2, tokenPrice2 } from '../../constants/Constants'
 
 const heavenly = "#ff0000"
+const price = tokenPrice2
+const contract = ourCollection2
 
 const Mint: NextPage = () => {
 
     const { mintQuantity, setMintQuantity } = useAppContext()
 
     // ZORA NFT Edition "purchase" Write
-    const totalMintPrice = String(mintQuantity.queryValue * tokenPrice)
+    const totalMintPrice = String(mintQuantity.queryValue * price)
     const mintValue = BigNumber.from(ethers.utils.parseEther(totalMintPrice)).toString()
 
     const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-        addressOrName: ourCollection,
+        addressOrName: contract,
         contractInterface: editionsABI.abi,
         functionName: 'totalSupply',
         args: [],
@@ -38,7 +40,7 @@ const Mint: NextPage = () => {
 
     // useContractWrite Mint Call
     const { data: mintData, isError: mintError, isLoading: mintLoading, isSuccess: mintSuccess, status: mintStatus, write: mintWrite  } = useContractWrite({
-        addressOrName: ourCollection,
+        addressOrName: contract,
         contractInterface: editionsABI.abi,
         functionName: 'purchase',
         args: [
@@ -73,13 +75,39 @@ const Mint: NextPage = () => {
             </Head>
             <main className="">
                 <div className="flex flex-col flex-wrap items-center mb-10 md:mb-0">
-                    <div className="w-[20%] min-w-[200px] text-center mb-1">
+                    <h1 className='mb-3' >
+                    {"[UN001] Ocelo"}
+                    </h1>
+                    <div className="w-[15%] min-w-[200px] text-center mb-3">
                         <Image  width={500}
                             height={500} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" />
                     </div>
-                    <div className={`mb-2 text-lg`} >
-                    {"[UN000] Astrosuka + Sofja - inicio"}
-                    </div>
+                    <div className="text-center w-[95%] md:w-[60%] mb-3" >           
+                        <p>
+                            electronic music compilation
+                        </p>
+                        <p>
+                            with tracks by QOA, vic bang, Yoto, gregorio nash & Astrosuka + Sofja.
+                        </p>
+                        <br />
+                        <p>
+                            each edition (<Link href={`https://etherscan.io/token/${contract}`} >
+                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
+                        </p>
+                        <br />
+                        <Link
+                                href="/un001/gallery"
+                            >
+                                <a
+                                    className="hover:text-[#0000ff] hover:underline hover:cursor-pointer"
+                                >
+                                    View Gallery
+                                </a>
+                        </Link>  
+                        <p className=''>
+                            ♥
+                        </p>
+                    </div> 
                     <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
@@ -98,7 +126,7 @@ const Mint: NextPage = () => {
                     { mintWaitLoading == true ? (
                         <div className="flex flex-col flex-wrap justify-center">           
                             <div className="text-center">
-                                0.02 ETH
+                            {price * mintQuantity.queryValue} ETH
 
                             </div>
                             <div className='flex flex-row justify-center flex-wrap'>
@@ -113,43 +141,19 @@ const Mint: NextPage = () => {
                         <div className="flex flex-col flex-wrap justify-center text-center">
                         <div className="">
                             
-                            0.02 ETH
+                        {price * mintQuantity.queryValue} ETH
 
                         </div>                
                             <div className="">
-                                {`${totalSupply}` + "/404 minted"}
-                            </div>
-                            <Link
-                                href="/un001/gallery"
-                            >
-                                <div
-                                    className="hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
-                                >
-                                    View Gallery
-                                </div>
-                            </Link>                                         
+                                {`${totalSupply}` + "/300 minted"}
+                            </div>                                       
                         </div>
                     )}
-                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >           
-                        <p className=''>
-                            ♥
-                        </p>
-                        <p>
-                            electronic music single.
-                        </p>
-                        <p>
-                            each edition (<Link href={`https://etherscan.io/token/${ourCollection}`} >
-                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
-                        </p>
-                        <br />
-                        <p>
-                            {`synthesized and recorded directly from an access virus ti2's output to a single stereo track.`}
-                        </p>
-                        <br />
-                        <p className='text-xs'>
+                                
+                       
+                        <p className='text-xs my-3'>
                         powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
                         </p>
-                    </div>             
                 </div>
             </main>
         </div>

@@ -4,7 +4,17 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['ipfs.io']
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/un001',
+        permanent: true,
+      },
+    ]
+  },
+  optimizeFonts: false,
 }
 
 module.exports = nextConfig
