@@ -58,7 +58,7 @@ const Gallery: NextPage = () => {
       </Head>
       <div className='flex flex-col justify-around pb-20 py-20'>
         <div className='w-[100%] text-center'>
-          view on <a href={`https://market.zora.co/collections/${contract}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
+          view on <a href={`https://market.zora.co/collections/${contract}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un001-ocelo" target={`_blank`}>opensea</a>
         </div>        
         <div className="flex flex-row flex-wrap justify-center items-center mb-10 md:mb-0">
           {data && data.map((nft: NFTObject) =>
