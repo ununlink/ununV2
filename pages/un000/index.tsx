@@ -73,9 +73,9 @@ const Mint: NextPage = () => {
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="">
+            <main className="md:text-base text-sm md:pb-0 pb-10">
                 <div className="flex flex-col flex-wrap items-center mb-10 md:mb-0">
-                    <div className="w-[20%] min-w-[200px] text-center mb-1">
+                    <div className="w-[20%] min-w-[150px] text-center mb-1">
                         <Image  width={500}
                             height={500} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" />
                     </div>
@@ -144,7 +144,7 @@ const Mint: NextPage = () => {
                             href="/un000/gallery" className=''
                         >
                             <a
-                                className=""
+                                className="galeria"
                             >
                                 gallery
                             </a>
