@@ -67,7 +67,7 @@ const Mint: NextPage = () => {
     })           
 
     return (
-        <div className='flex flex-col justify-around h-screen min-h-screen'>
+        <div className='flex flex-col justify-around h-screen min-h-screen un001'>
             <Head>
             <title>✧unun.inicio</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
@@ -78,10 +78,10 @@ const Mint: NextPage = () => {
                     <h1 className='mb-3' >
                     {"[UN001] Ocelo"}
                     </h1>
-                    <div className="w-[15%] min-w-[200px] text-center mb-3">
+                    {/* <div className="w-[15%] min-w-[200px] text-center mb-3">
                         <Image  width={500}
-                            height={500} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" />
-                    </div>
+                            height={500} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" />
+                    </div> */}
                     <div className="text-center w-[95%] md:w-[60%] mb-3" >           
                         <p>
                             electronic music compilation
@@ -91,19 +91,11 @@ const Mint: NextPage = () => {
                         </p>
                         <br />
                         <p>
-                            each edition (<Link href={`https://etherscan.io/token/${contract}`} >
-                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
+                            each edition — <Link href={`https://etherscan.io/token/${contract}`} >
+                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link> — comes with a unique generative cover artwork.
                         </p>
                         <br />
-                        <Link
-                                href="/un001/gallery"
-                            >
-                                <a
-                                    className="hover:text-[#0000ff] hover:underline hover:cursor-pointer"
-                                >
-                                    View Gallery
-                                </a>
-                        </Link>  
+                         
                         <p className=''>
                             ♥
                         </p>
@@ -149,11 +141,19 @@ const Mint: NextPage = () => {
                             </div>                                       
                         </div>
                     )}
-                                
-                       
-                        <p className='text-xs my-3'>
-                        powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
-                        </p>
+                             
+                    <Link
+                        href="/un001/gallery"
+                        >
+                        <a
+                            className="hover:text-[#0000ff] hover:underline hover:cursor-pointer mt-3"
+                        >
+                            View Gallery
+                        </a>
+                    </Link> 
+                    <p className='text-xs my-3'>
+                    powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
+                    </p>
                 </div>
             </main>
         </div>

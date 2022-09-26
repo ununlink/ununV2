@@ -56,7 +56,7 @@ const Gallery: NextPage = () => {
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='flex flex-col justify-around pb-20 my-20'>
+      <div className='flex flex-col justify-around pb-20 py-20'>
         <div className='w-[100%] text-center'>
           view on <a href={`https://market.zora.co/collections/${contract}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
         </div>        

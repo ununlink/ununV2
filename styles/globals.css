@@ -2,22 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: #000;
+  --bg-color: rgba(255, 255, 255, 0);
+  --acc-color: #00ff00;
+  --glass-w: rgba(255,255,255,0.2);
+  --glass-b: rgba(0,0,0,0.2);
+  --shadow: #444;
+}
+
 html,
 body {
   background-color: whitesmoke;
   /* background: radial-gradient(circle, hsl(0 0% 100%)  0%, hsl(1 81% 85%) 19%, hsl(0 0% 100%) 65%); */
 
-  color: black;
+  color: var(--main-color);
   padding: 0;
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  /* font-family: Courier, 'Courier New', monospace; */
+  font-family: Courier, 'Courier New', monospace;
 
 font-family: neue-haas-grotesk-display, sans-serif;
 font-weight: 400;
 font-style: normal;  
-font-size: 15px;
+
+/* font-family: neue-haas-grotesk-text,sans-serif;
+font-weight: 400;
+font-style: normal; */
 
 /* @apply text-sm */
 }
@@ -49,6 +61,14 @@ h1 {
 
 * {
   box-sizing: border-box;
+}
+
+.un001 {
+  background-image: url('../assets/9.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .form-line {
@@ -92,8 +112,10 @@ h1 {
   font-family: inherit;
   width: 100%;
   padding: 10px 15px;
-  background-color: rgb(255, 255, 255, 0) !important;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0) !important;
+  /* background-color: rgb(255, 255, 255, 0) !important;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0) !important; */
+  background-color: var(--bg-color) !important;
+  box-shadow: var(--acc-color) !important;
 }
 .rhap_container:focus:not(:focus-visible) {
   outline: 0;
@@ -163,7 +185,7 @@ h1 {
 }
 
 .rhap_time {
-  color: #000 !important; 
+  color: var(--main-color) !important; 
   font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
@@ -173,43 +195,46 @@ h1 {
   box-sizing: border-box;
   position: relative;
   z-index: 0;
-  width: 100%;
+  width: 100% !important;
   height: 5px;
-  background-color: rgba(238, 238, 238, 0) !important;
-  border-radius: 0px !important;
+  background-color: var(--glass-b)!important;
+  border-radius: 50px !important;
 }
 
 .rhap_progress-filled {
   height: 100%;
   position: absolute;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  border-radius: 0px !important;
+  background-color: var(--main-color) !important;
+  border-radius: 50px !important;
 }
 
 .rhap_progress-bar-show-download {
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--glass-b) !important;
 }
 
 .rhap_download-progress {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background-color: #999 !important;
-  border-radius: 0px!important;
+  /* background-color: #999 !important; */
+  background-color: var(--glass-b) !important;
+  border-radius: 50px!important;
 }
 
 .rhap_progress-indicator {
   box-sizing: border-box;
   position: absolute;
   z-index: 3;
-  width: 10px !important;
-  height: 10px !important;
+  width: 12px !important;
+  height: 9px !important;
   margin-left: -7px !important;
   top: -2px !important;
-  background: #777 !important;
+  /* background: #777 !important; */
+  background: var(--main-color) !important;
   border-radius: 50px;
-  box-shadow: rgba(134, 134, 134, 0) 0 0 5px !important;
+  /* box-shadow: rgba(134, 134, 134, 0) 0 0 5px !important; */
+  box-shadow: var(--shadow) 0 0 3.5px !important;
 }
 
 .rhap_controls-section {
@@ -229,7 +254,8 @@ h1 {
   font-size: 20px !important;
   width: 20px !important;
   height: 20px !important;
-  color: #666 !important;
+  /* color: #666 !important; */
+  color: var(--main-color) !important;
   margin-right: 0px !important;
 }
 
@@ -242,16 +268,17 @@ h1 {
 
 .rhap_main-controls-button {
   margin: 0 0.1em !important;
-  color: #666 !important;
+  /* color: #666 !important; */
+  color: var(--main-color) !important;
   font-size: 25px;
   width: 25px;
   height: 25px;
 }
 
 .rhap_play-pause-button {
-  font-size: 35px !important;
-  width: 35px!important;
-  height: 35px!important;
+  font-size: 30px !important;
+  width: 30px!important;
+  height: 30px!important;
 }
 
 .rhap_volume-controls {
@@ -266,7 +293,8 @@ h1 {
   font-size: 20px!important;
   width: 20px!important;
   height: 20px!important;
-  color: #666!important;
+  /* color: #666!important; */
+  color: var(--main-color)!important;
   margin-right: 0px !important;
 }
 
@@ -294,22 +322,25 @@ h1 {
   position: relative;
   width: 100%;
   height: 4px;
-  background: #ddd!important;
-  border-radius: 0px!important;
+  /* background: #ddd!important; */
+  background: var(--glass-b) !important;
+  border-radius: 50px!important;
 }
 
 .rhap_volume-indicator {
   box-sizing: border-box;
   position: absolute;
-  width: 10px!important;
-  height: 10px!important;
-  margin-left: -6px!important;
+  width: 12px!important;
+  height: 9px!important;
+  margin-left: -7px!important;
   left: 0;
-  top: -3px!important;
-  background: #666!important;
-  opacity: 0.9;
-  border-radius: 50px;
-  box-shadow: rgba(134, 134, 134, 0.5) 0 0 3px !important;
+  top: -2px!important;
+  /* background: #666!important; */
+  background: var(--main-color) !important;
+  opacity: 1 !important;
+  border-radius: 50px !important;
+  /* box-shadow: rgba(134, 134, 134, 0.5) 0 0 3px !important; */
+  box-shadow: var(--shadow) 0 0 3.5px !important;
   cursor: pointer;
 }
 .rhap_volume-indicator:hover {
@@ -320,7 +351,8 @@ h1 {
   height: 100%;
   position: absolute;
   z-index: 2;
-  background-color: #999!important;
+  /* background-color: #999!important; */
+  background-color: var(--main-color) !important;
   border-radius: 0px!important;
 }
 
