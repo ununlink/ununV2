@@ -6,12 +6,28 @@ import React from 'react';
 export const NFTPlayer = () => {
   // const playlist = useAppContext2()
   // console.log(playlist)
-  const playlist = [{ src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/inicio.mp3',
-  title: 'Astrosuka + Sofja - inicio',
+  const playlist = [{ src: 'https://ipfs.io/ipfs/afybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/qoa_rui3007.mp3',
+  title: 'QOA - RUI3007 [UN001]',
+  },
+  { src: 'https://ipfs.io/ipfs/afybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/vic_bang_fluut.mp3',
+  title: 'vic bang - fluut [UN001]',
+  },
+  { src: 'https://ipfs.io/ipfs/afybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/yoto_pickles.mp3',
+  title: 'Yoto - Pickles [UN001]',
+  },
+  { src: 'https://ipfs.io/ipfs/afybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/astrosuka_sofja_antenas.mp3',
+  title: 'Astrosuka + Sofja - antenas [UN001]',
+  },
+  { src: 'https://ipfs.io/ipfs/afybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/gregorio_nash_xoxox.mp3',
+  title: 'gregorio nash - xoxox ☀ɱιɱιƚσʂ☀༻ [UN001]',
+  },
+  { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/inicio.mp3',
+  title: 'Astrosuka + Sofja - inicio [UN000]'
   },
   { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/escondido.mp3',
-  title: 'Astrosuka + Sofja - escondido',
-  }]
+  title: 'Astrosuka + Sofja - escondido [UN000]'
+  }
+  ]
 
   const [currentTrack, setTrackIndex] = React.useState(0)
 

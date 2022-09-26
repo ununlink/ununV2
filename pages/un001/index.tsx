@@ -74,7 +74,7 @@ const Mint: NextPage = () => {
             <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="">
-                <div className="flex flex-col flex-wrap items-center mb-10 pb-10 md:mb-0">
+                <div className="flex flex-col flex-wrap items-center mb-10 pb-20 md:mb-0">
                     <h1 className='mb-3' >
                     {"[UN001] Ocelo"}
                     </h1>
@@ -119,7 +119,7 @@ const Mint: NextPage = () => {
                             each edition — <Link href={`https://etherscan.io/token/${contract}`} >
                             <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link> — comes with a unique generative cover artwork.
                         </p>                         
-                        <p className='my-3'>
+                        <p className='my-1'>
                             ♥
                         </p>
                     <Link href="/un001/gallery">
@@ -128,7 +128,7 @@ const Mint: NextPage = () => {
                         </a>
                     </Link> 
                     </div> 
-                    <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
+                    <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard z-[10]">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
                         className="p-1 hover:bg-[#eee] w-1/2 h-full border-solid border-[#000] border-l"
@@ -144,32 +144,30 @@ const Mint: NextPage = () => {
                         colorScheme={heavenly}
                     />  
                     { mintWaitLoading == true ? (
-                        <div className="flex flex-col flex-wrap justify-center">           
+                        <div className="flex flex-col flex-wrap justify-center ">           
                             <div className="text-center">
                             {price * mintQuantity.queryValue} ETH
-
                             </div>
                             <div className='flex flex-row justify-center flex-wrap'>
                                 <img
-                                className="bg-[#000] rounded-full p-1 mt-1" 
+                                className="bg-[#000] rounded-full p-1 mt-3" 
                                 width="25px"
                                 src="/SVG-Loaders-master/svg-loaders/tail-spin.svg"
                                 />
                             </div>
                         </div>
-                        ) : (                  
+                    ) : (  
                         <div className="flex flex-col flex-wrap justify-center text-center">
-                        <div className="text-sm">
-                            
-                        {price * mintQuantity.queryValue} ETH
-
-                        </div>                
-                            <div className="text-sm">
+                            <div>
+                                {price * mintQuantity.queryValue} ETH
+                            </div>                
+                            <div className="">
                                 {`${totalSupply}` + "/300 minted"}
                             </div>                                       
                         </div>
                     )}
-                    <p className='text-xs my-3'>
+                    <br />
+                    <p className='text-xs'>
                     powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
                     </p>
                 </div>
