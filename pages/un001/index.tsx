@@ -87,12 +87,37 @@ const Mint: NextPage = () => {
                             electronic music compilation
                         </p>
                         <p>
-                            with tracks by QOA, vic bang, Yoto, gregorio nash & Astrosuka + Sofja.
+                            with tracks by&nbsp; 
+                            
+                            <Link 
+                                href="https://qoaqoa.bandcamp.com/"
+                                ><a target="_blank">QOA</a>
+                                    </Link>,&nbsp; 
+                            <Link 
+                                href="https://vicbang.bandcamp.com/"
+                                ><a target="_blank">vic bang</a>
+                                    </Link>,&nbsp;
+                            <Link 
+                                href="https://yoto.bandcamp.com/"
+                                ><a target="_blank">Yoto</a>
+                                    </Link>,&nbsp;
+                            <Link 
+                                href="https://twitter.com/_gregorionash"
+                                ><a target="_blank">gregorio nash</a>
+                                    </Link>, &&nbsp;
+                            <Link 
+                                href="https://linktr.ee/astrosuka"
+                                ><a target="_blank">Astrosuka</a>
+                                    </Link> +&nbsp;
+                            <Link 
+                                href="https://linktr.ee/sofffja"
+                                ><a target="_blank">Sofja</a>
+                                    </Link>.
                         </p>
                         <br />
                         <p>
-                            each edition (<Link href={`https://etherscan.io/token/${contract}`} >
-                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>) comes with a unique generative cover artwork.
+                            each edition -<Link href={`https://etherscan.io/token/${contract}`} >
+                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link>- comes with a unique generative cover artwork.
                         </p>
                         <br />
                         <Link
