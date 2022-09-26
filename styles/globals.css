@@ -57,6 +57,13 @@ h1 {
   box-sizing: border-box;
 }
 
+.galeria {
+  font-family: swear-display,serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 .un001 {
   background-image: url('../assets/9.png');
   background-size: cover;

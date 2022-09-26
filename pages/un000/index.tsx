@@ -120,19 +120,10 @@ const Mint: NextPage = () => {
                             </div>             
                             <div className="">
                                 {`${totalSupply}` + "/404 minted"}
-                            </div>
-                            <Link
-                            href="/un000/gallery"
-                        >
-                            <div
-                                className="hover:text-[#0000ff] hover:unerline hover:cursor-pointer"
-                            >
-                                View Gallery
-                            </div>
-                        </Link>                            
+                            </div>                           
                         </div>
                     )}
-                    <div className="text-center w-[95%] md:w-[60%] text-xs md:text-sm" >
+                    <div className="text-center w-[95%] md:w-[60%] md:text-sm" >
 
                         <p className=''>
                             ♥
@@ -149,7 +140,17 @@ const Mint: NextPage = () => {
                            {`synthesized and recorded directly from an access virus ti2's output to a single stereo track.`}
                         </p>
                         <br />
-                        <p className='text-xs'>
+                        <Link
+                            href="/un000/gallery" className=''
+                        >
+                            <a
+                                className=""
+                            >
+                                gallery
+                            </a>
+                        </Link> 
+                        
+                        <p className='text-xs mt-6'>
                         powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
                         </p>
                     </div>             

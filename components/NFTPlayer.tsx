@@ -8,25 +8,25 @@ export const NFTPlayer = () => {
   // console.log(playlist)
   const playlist = [
     { src: 'https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/qoa_rui3007.mp3',
-      title: 'QOA - RUI3007 [UN001]',
+      title: '[UN001] QOA - RUI3007',
     },
     { src: 'https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/vic_bang_fluut.mp3',
-      title: 'vic bang - fluut [UN001]',
+      title: '[UN001] vic bang - fluut',
   },
     { src: 'https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/yoto_pickles.mp3',
-      title: 'Yoto - Pickles [UN001]',
+      title: '[UN001] Yoto - Pickles',
     },
     { src: 'https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/astrosuka_sofja_antenas.mp3',
-      title: 'Astrosuka + Sofja - antenas [UN001]',
+      title: '[UN001] Astrosuka + Sofja - antenas',
     },
     { src: 'https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/gregorio_nash_xoxox.mp3',
-      title: 'gregorio nash - xoxox ☀ɱιɱιƚσʂ☀༻ [UN001]',
+      title: '[UN001] gregorio nash - xoxox ☀ɱιɱιƚσʂ☀༻',
     },
     { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/inicio.mp3',
-      title: 'Astrosuka + Sofja - inicio [UN000]'
+      title: '[UN000] Astrosuka + Sofja - inicio'
     },
     { src: 'https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/escondido.mp3',
-      title: 'Astrosuka + Sofja - escondido [UN000]'
+      title: '[UN000] Astrosuka + Sofja - escondido'
     }
   ]
 

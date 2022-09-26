@@ -163,7 +163,7 @@ const Mint: NextPage = () => {
                     )}
                     <br />
                     <Link href="/un001/gallery">
-                        <a>
+                        <a className=''>
                             gallery
                         </a>
                     </Link> 
