@@ -102,16 +102,16 @@ const Mint: NextPage = () => {
                                 ><a target="_blank">Yoto</a>
                                     </Link>,&nbsp;
                             <Link 
-                                href="https://twitter.com/_gregorionash"
-                                ><a target="_blank">gregorio nash</a>
-                                    </Link>, &&nbsp;
-                            <Link 
                                 href="https://linktr.ee/astrosuka"
                                 ><a target="_blank">Astrosuka</a>
                                     </Link> +&nbsp;
                             <Link 
                                 href="https://linktr.ee/sofffja"
                                 ><a target="_blank">Sofja</a>
+                                    </Link>, &nbsp;
+                            <Link 
+                                href="https://twitter.com/_gregorionash"
+                                ><a target="_blank">gregorio nash</a>
                                     </Link>.
                         </p>
                         <p className='mt-3'>
