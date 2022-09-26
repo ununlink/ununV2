@@ -63,11 +63,14 @@ h1 {
   /* font-family: source-code-pro, monospace;
   font-weight: 400;
   font-style: normal; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-transform: uppercase;
   /* font-family: kepler-std, serif;
 font-weight: 400;
 font-style: italic; */
+font-family: aktiv-grotesk-extended, sans-serif;
+font-weight: 300;
+font-style: normal;
 }
 
 .un001 {
