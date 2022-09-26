@@ -67,21 +67,21 @@ const Mint: NextPage = () => {
     })           
 
     return (
-        <div className='flex flex-col justify-around h-screen min-h-screen un001'>
+        <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
             <title>✧unun.inicio</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="">
-                <div className="flex flex-col flex-wrap items-center mb-10 md:mb-0">
+                <div className="flex flex-col flex-wrap items-center mb-10 pb-10 md:mb-0">
                     <h1 className='mb-3' >
                     {"[UN001] Ocelo"}
                     </h1>
-                    {/* <div className="w-[15%] min-w-[200px] text-center mb-3">
+                    <div className="w-[15%] min-w-[200px] text-center mb-3">
                         <Image  width={500}
                             height={500} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" />
-                    </div> */}
+                    </div>
                     <div className="text-center w-[95%] md:w-[60%] mb-3" >           
                         <p>
                             electronic music compilation
@@ -118,12 +118,15 @@ const Mint: NextPage = () => {
                         <p>
                             each edition — <Link href={`https://etherscan.io/token/${contract}`} >
                             <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link> — comes with a unique generative cover artwork.
-                        </p>
-                        <br />
-                         
-                        <p className=''>
+                        </p>                         
+                        <p className='my-3'>
                             ♥
                         </p>
+                    <Link href="/un001/gallery">
+                        <a>
+                            View Gallery
+                        </a>
+                    </Link> 
                     </div> 
                     <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard">
                         <MintQuantity colorScheme={heavenly}/>
@@ -156,26 +159,16 @@ const Mint: NextPage = () => {
                         </div>
                         ) : (                  
                         <div className="flex flex-col flex-wrap justify-center text-center">
-                        <div className="">
+                        <div className="text-sm">
                             
                         {price * mintQuantity.queryValue} ETH
 
                         </div>                
-                            <div className="">
+                            <div className="text-sm">
                                 {`${totalSupply}` + "/300 minted"}
                             </div>                                       
                         </div>
                     )}
-                             
-                    <Link
-                        href="/un001/gallery"
-                        >
-                        <a
-                            className="hover:text-[#0000ff] hover:underline hover:cursor-pointer mt-3"
-                        >
-                            View Gallery
-                        </a>
-                    </Link> 
                     <p className='text-xs my-3'>
                     powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
                     </p>
