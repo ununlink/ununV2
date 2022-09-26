@@ -9,7 +9,8 @@ const sortOptions = [
    { name: '2', queryValue: '2' },
    { name: '3', queryValue: '3' },
    { name: '4', queryValue: '4' },
-   { name: '5', queryValue: '5' }
+   { name: '5', queryValue: '5' },
+   { name: '10', queryValue: '10' }
 ]
 
 export default function MintQuantity({ colorScheme }) {
