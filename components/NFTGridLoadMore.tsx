@@ -55,7 +55,7 @@ export const NFTGridLoadMore = ({
         className='justify-center flex flex-row py-4 h-1'
         aria-hidden
       >
-        {isValidating && <span>...loading...</span>}
+        {isValidating && <span></span>}
       </div>
     </div>
   )
