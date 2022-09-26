@@ -13,6 +13,16 @@ export const About = () => {
         a platform that adapts itself to our artistic needs, not the other way around.
         </p>
       <p className="mb-6">
+        <p>
+          download music:&nbsp;
+          <Link href='https://ipfs.io/ipfs/bafybeidhl3ygczc4b3lfn63mpybkhzpfjdsaz2tafpa35zzvqjfxxwblnq/' >
+            <a target="_blank" rel="noreferrer" className=''>un000</a>
+          </Link>
+          ,&nbsp;
+          <Link href='https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/' >
+            <a target="_blank" rel="noreferrer" className=''>un001</a>
+          </Link>
+        </p>
         <Link  href='https://mirror.xyz/unun-link.eth' >
           <a target="_blank" rel="noreferrer">(+info)</a>
         </Link>
