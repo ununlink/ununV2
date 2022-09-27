@@ -51,8 +51,10 @@ h1 {
   /* font-size: 3em; */
   letter-spacing: -0.05em;
 
+  @apply md:text-5xl text-3xl p-1
+}
 
-  @apply md:text-5xl text-3xl pb-1
+.menu {
 }
 
 * {
@@ -74,7 +76,7 @@ font-style: normal;
 }
 
 .un001 {
-  background-image: url('../assets/9.png');
+  /* background-image: url('../assets/9.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,7 +93,7 @@ font-style: normal;
 }
 
 .form-input {
-  @apply bg-white md:w-[70%] w-full p-1 m-1
+  @apply bg-white md:w-[70%] w-full py-1 px-2 m-1
 }
 
 .contenedor-nft {
