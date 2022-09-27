@@ -32,7 +32,7 @@ export default function MintQuantity({ colorScheme }) {
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2"
                   >
                   <span className="block truncate">{mintQuantity.name}</span>
-                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 pb-0.5">
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4 pb-0.4">
                      <SelectorIcon
                         className="h-4 w-4"
                         aria-hidden="true" 
@@ -66,7 +66,7 @@ export default function MintQuantity({ colorScheme }) {
                                  {option.name}
                                  </span>
                                  {selected ? (
-                                 <span className="absolute inset-y-0 r-0 flex items-center pl-6 text-black">
+                                 <span className="absolute inset-y-0 r-0 flex items-center text-black pl-[1em]">
                                     <CheckIcon className="h-4 w-4" aria-hidden="true" />
                                  </span>
                                  ) : null}
