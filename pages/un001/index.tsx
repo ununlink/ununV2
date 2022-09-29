@@ -69,7 +69,7 @@ const Mint: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
-            <title>✧unun.inicio</title>
+            <title>✧unun.ocelo</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -171,9 +171,9 @@ const Mint: NextPage = () => {
                             ♥
                         </p>
                     <br />
-                    <p className='text-xs'>
+                    {/* <p className='text-xs'>
                     powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
-                    </p>
+                    </p> */}
                 </div>
             </main>
         </div>

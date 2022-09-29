@@ -17,7 +17,7 @@ module.exports = {
           '-0.5px -0.5px 0px rgba(255, 255, 255, 1)'
         ],
         'glow' : [
-          '0 0 8px #ff00ff9d'
+          '0 0 8px #f5d9ab'
         ]
       }
     },

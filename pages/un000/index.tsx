@@ -150,9 +150,9 @@ const Mint: NextPage = () => {
                             </a>
                         </Link> 
                         
-                        <p className='text-xs mt-6'>
+                        {/* <p className='text-xs mt-6'>
                         powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
-                        </p>
+                        </p> */}
                     </div>             
                 </div>
             </main>
