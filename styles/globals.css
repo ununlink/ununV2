@@ -107,7 +107,7 @@ font-style: normal;
 }
 
 .form-input {
-  @apply bg-[#255] md:w-[70%] w-full py-1 px-2 m-1
+  @apply bg-[#fff] md:w-[70%] w-full py-1 px-2 m-1
 }
 
 .contenedor-nft {
