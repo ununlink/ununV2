@@ -13,7 +13,6 @@ const Home: NextPage = () => {
             <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="m-[10%]">
-                <p className='italic mb-3'>links</p>
                 <div className='flex flex-col'>
 
                     <p className='links-wrap'>
