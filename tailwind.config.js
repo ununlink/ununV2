@@ -21,6 +21,15 @@ module.exports = {
         ]
       }
     },
+    colors: {
+      main: 'var(--main-color)',
+      background: 'var(--bg-color)',
+      transparent: 'var(--transparent)',
+      accent: 'var(--acc-color)',
+      glassw: 'var(--glass-w)',
+      glassb: 'var(--glass-w)',
+      shadow: 'var(--shadow)'
+    }
   },
   plugins: [],
   darkMode: 'class',

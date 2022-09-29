@@ -4,7 +4,8 @@
 
 :root {
   --main-color: #000;
-  --bg-color: rgba(255, 255, 255, 0);
+  --bg-color: rgb(245, 245, 245);
+  --transparent: rgba(255, 255, 255, 0);
   --acc-color: #00ff00;
   --glass-w: rgba(255,255,255,0.2);
   --glass-b: rgba(0,0,0,0.2);
@@ -13,7 +14,7 @@
 
 html,
 body {
-  background-color: whitesmoke;
+  background-color: var(--bg-color);
   /* background: radial-gradient(circle, hsl(0 0% 100%)  0%, hsl(1 81% 85%) 19%, hsl(0 0% 100%) 65%); */
 
   color: var(--main-color);
@@ -106,7 +107,7 @@ font-style: normal;
 }
 
 .form-input {
-  @apply bg-white md:w-[70%] w-full py-1 px-2 m-1
+  @apply bg-[#255] md:w-[70%] w-full py-1 px-2 m-1
 }
 
 .contenedor-nft {
@@ -139,7 +140,7 @@ font-style: normal;
   padding: 10px 15px;
   /* background-color: rgb(255, 255, 255, 0) !important;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0) !important; */
-  background-color: var(--bg-color) !important;
+  background-color: var(--transparent) !important;
   box-shadow: var(--acc-color) !important;
 }
 .rhap_container:focus:not(:focus-visible) {

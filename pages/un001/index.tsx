@@ -121,7 +121,7 @@ const Mint: NextPage = () => {
                         
                     
                     </div> 
-                    <div className="flex justify-center mb-3 bg-[#f5f5f5] drop-shadow-hard z-[10]">
+                    <div className="flex justify-center mb-3 bg-background drop-shadow-hard z-[10]">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
                         className="p-1 hover:bg-[#eee] w-1/2 h-full border-solid border-[#000] border-l"

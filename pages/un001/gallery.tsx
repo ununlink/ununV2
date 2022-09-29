@@ -45,7 +45,7 @@ const Gallery: NextPage = () => {
 
   /// aqui es donde puedes accesar la metadata de cada nft
   console.log("data: ", data)
-  console.log("https://ipfs.io/ipfs/"+data[0].media.image.uri.split("://").pop())
+  // console.log("https://ipfs.io/ipfs/"+data[0].media.image.uri.split("://").pop())
   ///
 
   /// this provides a front end check for the infinite scroll check
@@ -63,10 +63,11 @@ const Gallery: NextPage = () => {
           view on <a href={`https://market.zora.co/collections/${contract}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un001-ocelo" target={`_blank`}>opensea</a>
         </div>        
         <div className="flex flex-row flex-wrap justify-center items-center mb-10 md:mb-0">
-          <div className="text-center mb-1">
+          {/* <div className="text-center mb-1">
             <Image  width={500}
                 height={500} src={`https://ipfs.io/ipfs/`+data[1].media.image.uri.split("://").pop()} />
-          </div>
+          </div> */}
+
           {data && data.map((nft: NFTObject) =>
             
             <MediaConfiguration
