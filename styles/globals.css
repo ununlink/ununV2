@@ -34,8 +34,9 @@ body {
 }
 
 a {
-  font-style: italic;
+  /* font-style: italic; */
   color: inherit;
+  /* text-decoration: underline; */
   @apply drop-shadow-glow
 }
 a:hover {
@@ -76,11 +77,23 @@ font-style: normal;
 }
 
 .un001 {
-  /* background-image: url('../assets/9.png'); */
+  background-image: url('../assets/9.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.links-wrap {
+  text-transform: lowercase;
+
+  @apply flex flex-col mb-3
+}
+.links{
+  @apply mb-2
+}
+.links::before {
+  content: '⥼ '
 }
 
 .form-line {
