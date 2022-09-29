@@ -52,7 +52,7 @@ const Gallery: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>✧unun.gallery</title>
+        <title>✧unun.inicio</title>
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

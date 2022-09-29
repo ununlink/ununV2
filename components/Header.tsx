@@ -27,7 +27,14 @@ export const Header = () => {
           <a className="filter-none not-italic">
             ?
           </a>
-        </Link>      
+        </Link>  
+        <Link
+          href="/links"
+        >
+          <a className="filter-none not-italic">
+            links
+          </a>
+        </Link>     
       </div>
 
       <div className="">
