@@ -11,15 +11,21 @@ body[data-theme="light"] {
   --glass-w: rgba(255,255,255,0.2);
   --glass-b: rgba(0,0,0,0.2);
   --shadow: #444;
+  --link-glow: #f5d9ab;
+  --link-hover: #0000ff;
+  --mint-hover: #eee;
 }
 body[data-theme="dark"] {
   --main-color: rgb(255, 255, 255);
-  --bg-color: rgb(43, 43, 43);
+  --bg-color: rgb(22, 22, 22);
   --transparent: rgba(255, 255, 255, 0);
   --acc-color: #00ff00;
   --glass-w: rgba(255,255,255,0.2);
   --glass-b: rgba(0,0,0,0.2);
   --shadow: #444;
+  --link-glow: rgb(106, 87, 156);
+  --link-hover: #62ff00;
+  --mint-hover: rgb(27, 27, 27);
 }
 
 html,
@@ -51,7 +57,7 @@ a {
   @apply drop-shadow-glow
 }
 a:hover {
-  color: #0000ff;
+  color: var(--link-hover);
   text-decoration: underline;
 }
 

@@ -69,7 +69,7 @@ const Mint: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
-            <title>✧unun.inicio</title>
+            <title>✧unun/inicio</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -85,7 +85,7 @@ const Mint: NextPage = () => {
                     <div className="flex justify-center mb-3 bg-background drop-shadow-hard z-[10]">
                         <MintQuantity colorScheme={heavenly}/>
                         <button 
-                        className="p-1 hover:bg-[#eee] w-1/2 h-full border-solid border-[#000] border-l"
+                        className="p-1 hover:bg-minthov w-1/2 h-full border-solid border-[#000] border-l"
                         onClick={() => mintWrite()}   
                         >
                         mint

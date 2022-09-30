@@ -15,21 +15,22 @@ const zdkStrategyMainnet = new Strategies.ZDKFetchStrategy(
 
 const STYLE_OVERRIDE = {
   theme: {
-  bodyFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
-  titleFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
-  borderStyle: "dashed 1px",
-  defaultBorderRadius: 0,
-  preferredIPFSGateway: "https://ipfs.io/ipfs/",
-  showOwner: false,
-  showCreator: false,
-  previewCard: {
-      background: '#f5f5f5'
-  },
-  padding: '3px',
-  showTxnLinks: true,
-  useEnsResolution: true,
-  useCollectionTag: true,
-  },
+    bodyFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
+    titleFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
+    linkColor: 'var(--main-color)',
+    borderStyle: "dashed 1px",
+    defaultBorderRadius: 10,
+    preferredIPFSGateway: "https://ipfs.io/ipfs/",
+    showOwner: false,
+    showCreator: false,
+    previewCard: {
+        background: 'var(--bg-color)'
+    },
+    padding: '3px',
+    showTxnLinks: true,
+    useEnsResolution: true,
+    useCollectionTag: true,
+    },
 };
 
 const Gallery: NextPage = () => {
@@ -54,7 +55,7 @@ const Gallery: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>✧unun.ocelo</title>
+        <title>✧unun/ocelo</title>
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

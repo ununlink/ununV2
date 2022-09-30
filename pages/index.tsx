@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     return (
         <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
-            <title>✧unun.inicio</title>
+            <title>✧unun</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>

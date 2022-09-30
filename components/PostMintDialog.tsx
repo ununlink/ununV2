@@ -26,12 +26,13 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
 
     return (
         <> 
-        {publicTxnLoadingStatus == false && publicIsRendered == "success" ? (    
+        {publicTxnLoadingStatus == false && publicIsRendered == "success" ? (  
+            // {publicTxnLoadingStatus == false ? (    
             <div> 
             <button
                 type="button"
                 onClick={openModal}
-                className="mt-3 w-full sm:text-lg relative justify-center flex flex-row p-2 bg-white hover:text-[#00F] rounded-lg"
+                className="mt-3 w-full sm:text-lg relative justify-center flex flex-row p-2 bg-white hover:text-hover rounded-lg"
             >✧ your mint info ✧
             </button>        
         <Transition appear show={isOpen} as={Fragment}>
@@ -77,13 +78,13 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
                             
                                 </a>
                                 </div>
-                                <div className="mb-3">
+                                {/* <div className="mb-3">
                                 <Link href="/gallery">
                                     <a className={` hover:text-[${colorScheme}]`}>
                                         go to gallery➝ 
                                     </a>
                                 </Link>
-                                </div>
+                                </div> */}
                                 <button                                    
                                     className={` hover:bg-[${colorScheme}] 
                                     px-2 pb-1 text text-black bg-white rounded-full borer-solid border-white border hover:text-black`} 

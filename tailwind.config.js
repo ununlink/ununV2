@@ -17,7 +17,7 @@ module.exports = {
           '-0.5px -0.5px 0px rgba(255, 255, 255, 1)'
         ],
         'glow' : [
-          '0 0 8px #f5d9ab'
+          '0 0 8px var(--link-glow)'
         ]
       }
     },
@@ -28,7 +28,9 @@ module.exports = {
       accent: 'var(--acc-color)',
       glassw: 'var(--glass-w)',
       glassb: 'var(--glass-w)',
-      shadow: 'var(--shadow)'
+      shadow: 'var(--shadow)',
+      hover: 'var(--link-hover)',
+      minthov: 'var(--mint-hover)'
     }
   },
   plugins: [],

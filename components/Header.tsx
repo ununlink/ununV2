@@ -8,7 +8,9 @@ export const Header = () => {
   return (
     <div className="p-2 z-10 fixed top-0 left-0 right-0 flex justify-between backdrop-blur-md menu">
 
-      <div className="flex flex-row w-fit space-x-4">                   
+      <div className="flex flex-row w-fit space-x-4">  
+      <ThemeToggle />
+                 
         <Link
           href="/un001"
         >
@@ -37,7 +39,6 @@ export const Header = () => {
             links
           </a>
         </Link>
-        {/* <ThemeToggle /> */}
       </div>
 
       <div className="">

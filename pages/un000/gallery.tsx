@@ -16,13 +16,14 @@ const STYLE_OVERRIDE = {
   theme: {
   bodyFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
   titleFont: `font-family: courier, "Courier New", andale mono, monaco, monospace, sans serif;`,
+  linkColor: 'var(--main-color)',
   borderStyle: "dashed 1px",
-  defaultBorderRadius: 0,
+  defaultBorderRadius: 10,
   preferredIPFSGateway: "https://ipfs.io/ipfs/",
   showOwner: false,
   showCreator: false,
   previewCard: {
-      background: '#f5f5f5'
+      background: 'var(--bg-color)'
   },
   padding: '3px',
   showTxnLinks: true,
@@ -52,7 +53,7 @@ const Gallery: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>✧unun.inicio</title>
+        <title>✧unun/inicio</title>
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

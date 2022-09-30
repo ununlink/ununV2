@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <div className='flex flex-col justify-center h-screen min-h-screen bg-gradient-to-r from-black-200 to-blue-300'>
       <Head>
-        <title>✧unun.about</title>
+        <title>✧unun/about</title>
         <meta name="description" content="✧unun." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

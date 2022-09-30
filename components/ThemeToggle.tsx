@@ -17,7 +17,7 @@ export const ThemeToggle = () => {
         type="button"
         onClick={() => setActiveTheme(inactiveTheme)}
       >
-        toggle
+        ⬤
       </button>
     );
   };
