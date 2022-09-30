@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ElBoton } from "./CustomButton";
+import { ThemeToggle } from "./ThemeToggle"
+
 
 export const Header = () => {
 
@@ -34,7 +36,8 @@ export const Header = () => {
           <a className="filter-none not-italic">
             links
           </a>
-        </Link>     
+        </Link>
+        {/* <ThemeToggle /> */}
       </div>
 
       <div className="">

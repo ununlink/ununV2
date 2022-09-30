@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+body,
+body[data-theme="light"] {
   --main-color: #000;
   --bg-color: rgb(245, 245, 245);
+  --transparent: rgba(255, 255, 255, 0);
+  --acc-color: #00ff00;
+  --glass-w: rgba(255,255,255,0.2);
+  --glass-b: rgba(0,0,0,0.2);
+  --shadow: #444;
+}
+body[data-theme="dark"] {
+  --main-color: rgb(255, 255, 255);
+  --bg-color: rgb(43, 43, 43);
   --transparent: rgba(255, 255, 255, 0);
   --acc-color: #00ff00;
   --glass-w: rgba(255,255,255,0.2);
