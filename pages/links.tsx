@@ -59,6 +59,34 @@ const Home: NextPage = () => {
                             </Link>
                         </p>
                         <p className='links'>
+                            <Link className='links' href="https://vicbang.bandcamp.com/album/burung">
+                                <a target={`_blank`}>
+                                vic bang - Burung (Moon Glyph)
+                                </a>
+                            </Link>
+                        </p>
+                        <p className='links'>
+                            <Link className='links' href="https://vicbang.bandcamp.com/album/lira">
+                                <a target={`_blank`}>
+                                vic bang - Lira (Kit Records)
+                                </a>
+                            </Link>
+                        </p>
+                        <p className='links'>
+                            <Link className='links' href="https://www.youtube.com/watch?v=dLV6GtNKQB8&t=1426s">
+                                <a target={`_blank`}>
+                                Vic Bang en Vivo ≧◠‿◠≦ x Salon Bruit Rerouted x ColaBoRadio
+                                </a>
+                            </Link>
+                        </p>
+                        <p className='links'>
+                            <Link className='links' href="https://www.youtube.com/watch?v=RIX2ZpKJ9Wg">
+                                <a target={`_blank`}>
+                                Música para muebles de interior - Insatlación Audiovisual para Música Expandida - Instituto Kagel
+                                </a>
+                            </Link>
+                        </p>
+                        <p className='links'>
                             <Link className='links' href="https://www.nts.live/shows/kitrecords/episodes/kit-records-19th-july-2020">
                                 <a target={`_blank`}>
                                 KIT RECORDS W/ VIC BANG NTS
