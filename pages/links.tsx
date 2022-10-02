@@ -6,13 +6,13 @@ const Home: NextPage = () => {
 
 
     return (
-        <div className='flex flex-col justify-around'>
+        <div className='flex flex-col justify-around h-screen min-h-screen'>
             <Head>
             <title>✧unun/links</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="m-[10%]">
+            <main className="mx-[10%] mb-10">
                 <div className='flex flex-col'>
 
                     <p className='links-wrap'>
