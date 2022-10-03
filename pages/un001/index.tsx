@@ -116,10 +116,10 @@ const Mint: NextPage = () => {
                         </p>
                         <p className='mt-3'>
                             each edition — <Link href={`https://etherscan.io/token/${contract}`} >
-                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link> — comes with a unique generative cover artwork and one of the five tracks.
+                            <a target="_blank" rel="noreferrer" className=''>ERC721</a></Link> — comes with a unique generative cover artwork & one of the five tracks.
                         </p>
                         <p className='mt-3 text-sm italic'>
-                        to get the entire compilation mint 5 tokens in a single transactio
+                        to get the entire compilation mint 5 tokens in a single transaction.
                         </p>
                     </div> 
                     <div className="flex justify-center mb-3 bg-background drop-shadow-hard z-[10]">
