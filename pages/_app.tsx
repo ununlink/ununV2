@@ -19,14 +19,20 @@ import Layout from '../components/Layout';
 
 import { NFTFetchConfiguration } from '@zoralabs/nft-hooks'
 import { ZDKFetchStrategy } from '@zoralabs/nft-hooks/dist/strategies'
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider } = configureChains(
   [chain.mainnet],
   [
-    // alchemyProvider({ alchemyId: process.env.NEXT_PUBLIC_ALCHMEY_ID }),
+    jsonRpcProvider({
+      priority: 0,
+      rpc: (chain) => (chain.id === 1 ? { http: `https://rpc.ankr.com/eth` } : null)
+    }),
     publicProvider()
   ]
 );
+
+
 
 const { connectors } = getDefaultWallets({
   appName: 'My RainbowKit App',
