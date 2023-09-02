@@ -12,7 +12,7 @@ const Home: NextPage = () => {
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="">
+            {/* <main className="">
                 <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0">
                     <Link
                         href="/un000"
@@ -32,6 +32,14 @@ const Home: NextPage = () => {
                             un001
                         </div>
                     </Link>                    
+                </div>
+            </main> */}
+            <main className=''>
+            <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0">
+            <div
+                            className="md:text-8xl text-2xl hover:cursor-help"
+                        >UNDER CONSTRUCTION
+            </div>
                 </div>
             </main>
         </div>

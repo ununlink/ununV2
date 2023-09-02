@@ -5,15 +5,15 @@ const nextConfig = {
   images: {
     domains: ['ipfs.io']
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/un001',
-        permanent: true,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/un001',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
   optimizeFonts: false,
 }
 
