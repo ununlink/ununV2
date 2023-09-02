@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0">
             <div
                             className="md:text-8xl text-2xl hover:cursor-help"
-                        >UNDER CONSTRUCTION
+                        >🚧 UNDER CONSTRUCTION 🚧
             </div>
                 </div>
             </main>

@@ -114,6 +114,13 @@ const Home: NextPage = () => {
                                 </a>
                             </Link>
                         </p>
+                        <p className='links'>
+                            <Link className='links' href="https://aguja.re">
+                                <a target={`_blank`}>
+                                aguja 
+                                </a>
+                            </Link>
+                        </p>
                     </p>
                     
                 </div>
