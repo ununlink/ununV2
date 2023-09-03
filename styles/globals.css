@@ -5,6 +5,7 @@
 body,
 body[data-theme="light"] {
   --main-color: #000;
+  /* --main-color: #ff4400; */
   --bg-color: rgb(245, 245, 245);
   --transparent: rgba(255, 255, 255, 0);
   --acc-color: #00ff00;
