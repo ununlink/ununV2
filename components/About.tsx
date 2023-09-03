@@ -22,6 +22,12 @@ export const About = () => {
           <Link href='https://ipfs.io/ipfs/bafybeicb2wmg7ud2hzn4zsvg4o25msjv2ylyoh5q4ybgsldbofmrvvosoa/' >
             <a target="_blank" rel="noreferrer" className=''>un001</a>
           </Link>
+          <p>
+          or support on&nbsp; 
+          <Link href='https://unun.bandcamp.com' >
+            <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
+          </Link>
+          </p>
         </p>
         <Link  href='https://mirror.xyz/unun-link.eth' >
           <a target="_blank" rel="noreferrer">(+info)</a>
