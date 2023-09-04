@@ -1,26 +1,9 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import Head from 'next/head'
-import { About } from '../components/About'
+import Link from "next/link";
 
-const Home: NextPage = () => {
+export const Links = () => {
 
-
-    return (
-        
-        <div className='flex flex-col justify-around'>
-            
-            <Head>
-            <title>✧unun/links</title>
-            <meta name="description" content="mutable netlabel for music and multimedia" />
-            <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <main className="mt-12 mb-40">
-            <About />
-                <div className='flex flex-col mt-10 p-4'>
-
-                    <p className='links-wrap'>
+  return (
+    <p className='links-wrap'>
                         <p className='links'>
                             <Link className='links' href="https://soundcloud.com/platform/hard-dance-093-astrosuka-b2b-sofja">
                                 <a target={`_blank`}>
@@ -127,11 +110,6 @@ const Home: NextPage = () => {
                             </Link>
                         </p>
                     </p>
-                    
-                </div>
-            </main>
-        </div>
-    )
-}
+  )
 
-export default Home
+};

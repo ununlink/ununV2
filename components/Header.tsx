@@ -25,13 +25,13 @@ export const Header = () => {
           un000
           </a>
         </Link> */}
-        <Link
+        {/* <Link
           href="/about"
         >
           <a className="filter-none not-italic">
             ?
           </a>
-        </Link>  
+        </Link>   */}
         <Link
           href="/links"
         >
