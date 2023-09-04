@@ -25,7 +25,7 @@ export const ElBoton = () => {
               if (!mounted || !account || !chain) {
                 return (
                   <button onClick={openConnectModal} type="button" className="hover:text-hover hover:underline">
-                    connect🔌
+                    connect
                   </button>
                 );
               }

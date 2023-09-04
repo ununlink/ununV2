@@ -419,3 +419,32 @@ font-style: normal;
 .rhap_button-clear:focus:not(:focus-visible) {
   outline: 0;
 }
+
+
+
+/* barra scroll */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-color) var(--main-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  /* border-radius: 5px; */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  /* border-radius: 14px;
+  border: 3px solid var(--primary); */
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+} */

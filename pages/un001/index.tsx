@@ -67,20 +67,20 @@ const Mint: NextPage = () => {
     })           
 
     return (
-        <div className='flex flex-col justify-around h-screen min-h-screen'>
+        <div className='flex flex-col justify-around mt-12'>
             <Head>
             <title>✧unun/ocelo</title>
             <meta name="description" content="mutable netlabel for music and multimedia" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="">
+            {/* <main className="flex flex-wrap">
                 <div className="flex flex-col flex-wrap items-center mb-10 pb-10 md:mb-0 md:text-base text-sm">
                     <h1 className='mb-1' >
                     {"[UN001] Ocelo"}
                     </h1>
                     <div className="w-[15%] min-w-[150px] text-center mb-1">
-                        <Image  width={500}
-                            height={500} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" />
+                        <Image  width={750}
+                            height={750} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" />
                     </div>
                     <div className="text-center w-[95%] md:w-[60%] mb-3" >           
                         <p>
@@ -172,10 +172,133 @@ const Mint: NextPage = () => {
                             ♥
                         </p>
                     <br />
-                    {/* <p className='text-xs'>
-                    powered by <Link href='https://zora.co/manifesto' ><a target="_blank" className=''>☾ zora ☽</a></Link>
-                    </p> */}
+              
                 </div>
+            </main> */}
+
+<main className="flex flex-col md:flex-row">
+                <div className="w-[100%] lg:w-[50%] min-w-[150px] text-center mb-1">
+                <Image  width={730} height={730} src="/0000227.jpg" />
+                     {/* <Image  width={750} height={750} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" /> */}
+                </div>
+                <div className="flex flex-col flex-wrap items-left mb-10 md:mb-0 pl-2 pr-2">
+                <h1 className={`mb-2 text-4xl`} >
+                    {"[UN001] Ocelo"}
+                    </h1>
+                    <div className="text-left" >
+
+                        <p>
+                        electronic music compilation & collection of 300 generative artworks.
+                        </p>
+                       <br />
+                        <p>
+                            01. <Link 
+                                href="https://qoaqoa.bandcamp.com/"
+                                ><a target="_blank">QOA</a>
+                                    </Link> - RUI3007 [03:29]<br /> 
+                            02. <Link 
+                                href="https://vicbang.bandcamp.com/"
+                                ><a target="_blank">vic bang</a>
+                                    </Link> - fluut [03:59]<br />
+                            03. <Link 
+                                href="https://yoto.bandcamp.com/"
+                                ><a target="_blank">Yoto</a>
+                                    </Link> - Pickles [01:45]<br />
+                            04. <Link 
+                                href="https://astrosuka.xyz"
+                                ><a target="_blank">Astrosuka</a>
+                                    </Link> +&nbsp;
+                            <Link 
+                                href="https://sofffja.com"
+                                ><a target="_blank">Sofja</a>
+                                    </Link> - antenas [04:12]<br />
+                            05. <Link 
+                                href="https://twitter.com/_gregorionash"
+                                ><a target="_blank">gregorio nash</a>
+                                    </Link> - xoxox ☀ɱιɱιƚσʂ☀༻ [07:00]
+                        </p>
+                        <br />
+                    
+                        <p>
+                            each edition — <Link href={`https://etherscan.io/token/${contract}`} >
+                            <a target="_blank" rel="noreferrer" className=''>erc721</a></Link> — comes with: <br />
+                            <ul className='list-disc list-inside'>
+                                <li>1 of 5 .wav + .mp3</li>
+                                <li>1 of 300 .jpg</li>
+                            </ul>
+                           
+                        <span className='mt-3 text-sm italic'>
+                        *to get the entire compilation mint 5 tokens in a single transaction.
+                        </span>
+                        </p>
+                        <br />
+                     
+                        
+                    </div>   
+
+                <div className="w-[35%] lg:w-[20%] z-[10]">
+                    <div className="flex justify-center mb-3 bg-background drop-shadow-hard z-[10]">
+                        <MintQuantity colorScheme={heavenly}/>
+                        <button 
+                        className="p-1 hover:bg-minthov w-1/2 h-full border-solid border-[#000] border-l"
+                        onClick={() => mintWrite()}   
+                        >
+                        mint
+                        </button>
+                    </div>
+                    <PostMintDialog 
+                        publicTxnLoadingStatus={mintWaitLoading}
+                        publicTxnSuccessStatus={mintStatus}
+                        publicTxnHashLink={mintWaitData}
+                        colorScheme={heavenly}
+                    />  
+                    { mintWaitLoading == true ? (
+                        <div className="flex flex-col flex-wrap justify-center">           
+                            <div className="text-center">
+                            {price * mintQuantity.queryValue} ETH
+
+                            </div>
+                            <div className='flex flex-row justify-center flex-wrap'>
+                                <img
+                                className="bg-[#000] rounded-full p-1 mt-1" 
+                                width="25px"
+                                src="/SVG-Loaders-master/svg-loaders/tail-spin.svg"
+                                />
+                            </div>
+                        </div>
+                        ) : (                  
+                        <div className="flex flex-col flex-wrap justify-center text-left">
+                            <div className="">
+                                
+                            {price * mintQuantity.queryValue} ETH
+
+                            </div>             
+                            <div className="">
+                                {`${totalSupply}` + " collected"}
+                            </div>                           
+                        </div>
+                    )}   
+                </div>
+           
+                <div >
+                        <Link
+                            href="/un001/gallery" className=''
+                        >
+                            <a className="galeria">
+                                view gallery
+                            </a>
+                        </Link> 
+                    </div>
+                    <br />
+                    <p>available on &nbsp;
+                        <Link href='https://unun.bandcamp.com/album/un001-ocelo' >
+                            <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
+                        </Link>
+                        </p>
+                    <div className='mb-[15em]'>released September 26, 2022
+                    </div>
+                </div>
+ 
             </main>
         </div>
     )

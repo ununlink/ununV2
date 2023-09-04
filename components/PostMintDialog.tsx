@@ -65,7 +65,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
                             <div className="px-8 py-4">
                                 <div className="mb-3">
                                 {/* ღゝ◡╹)ノ💿 */}
-                                🎉🎉🎉
+                                mint successful!
                                 </div>
                                 <div className="mb-3">
                                 <a 
@@ -74,7 +74,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    etherscan tx
+                                    view etherscan tx
                             
                                 </a>
                                 </div>
@@ -92,7 +92,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
                                     closeModal()                          
                                     }}
                                 >
-                                    ok
+                                    close
                                 </button>
                             </div>
                         </div>                        
@@ -103,7 +103,7 @@ export default function PostMintDialog({ colorScheme, publicTxnLoadingStatus, pu
             </Dialog>
         </Transition>
         </div> 
-            ) : (
+            ) : ( 
                 <>
                 </>
             )}

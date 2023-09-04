@@ -11,9 +11,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-        {showHeader && <Header />}
+        {<Header />}
       {children}
-      {showHeader && <Footer />}
+      {<Footer />}
+      {/* {showHeader && <Footer />} */}
 
     </>
   );

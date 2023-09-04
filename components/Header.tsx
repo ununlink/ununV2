@@ -12,19 +12,19 @@ export const Header = () => {
       <ThemeToggle />
                  
         <Link
-          href="/un001"
+          href="/"
         >
           <a className="filter-none not-italic">
-          un001
+          ✧unun.
           </a>
         </Link>
-        <Link
-          href="/un000"
+        {/* <Link
+          href="/"
         >
           <a className="filter-none not-italic">
           un000
           </a>
-        </Link>
+        </Link> */}
         <Link
           href="/about"
         >
