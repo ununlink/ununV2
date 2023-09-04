@@ -4,7 +4,7 @@ export const About = () => {
 
   return (
     <div>
-    <div id="darks" className='bg-background p-4 drop-shadow-hard text-sm'>
+    <div id="darks" className='bg-background p-4 drop-shadow-hard'>
         <p className='mb-1'>mutable netlabel for hybrid music & multimedia experiments.
         </p>
         {/* <p className='mb-3'>
