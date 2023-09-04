@@ -74,7 +74,7 @@ const Mint: NextPage = () => {
             <link rel="icon" href="/favicon.ico" />
             </Head>
             {/* <main className="md:text-base text-sm md:pb-0 pb-10"> */}
-            <main className="flex flex-col md:flex-row">
+            <main className="flex flex-col md:flex-row pb-[8em] lg:pb-[6em]">
                 <div className="w-[100%] lg:w-[50%] min-w-[150px] text-center mb-1">
                 {/* <Image  width={800} height={800} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" /> */}
                      <Image alt='inicio'  width={730} height={730} src="/0000114.jpg" />
@@ -175,7 +175,13 @@ const Mint: NextPage = () => {
                             <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
                         </Link>
                         </p>
-                    <div className='mb-[15em]'>released August 6, 2022
+                    <div className=''>released August 6, 2022
+                    </div>
+
+                    <div className='mt-[4em]'>
+                    <Link href="un001" className=''>
+                            <a className=''>{`NEXT RELEASE [UN001] >`}</a>
+                        </Link>
                     </div>
                 </div>
  

@@ -176,7 +176,7 @@ const Mint: NextPage = () => {
                 </div>
             </main> */}
 
-<main className="flex flex-col md:flex-row">
+<main className="flex flex-col md:flex-row pb-[8em] lg:pb-[6em]">
                 <div className="w-[100%] lg:w-[50%] min-w-[150px] text-center mb-1">
                 <Image alt='ocelo' width={730} height={730} src="/0000227.jpg" />
                      {/* <Image  width={750} height={750} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" /> */}
@@ -218,7 +218,15 @@ const Mint: NextPage = () => {
                                     </Link> - xoxox ☀ɱιɱιƚσʂ☀༻ [07:00]
                         </p>
                         <br />
-                    
+
+                        <p>run the artwork script&nbsp;
+                            <Link href="https://www.astrosuka.xyz/ocelo">
+                                <a target='_blank' className='font-black'>here</a>
+                            </Link>
+                           <br /> (generate new versions on click)
+                           
+                        </p>
+                        <br />
                         <p>
                             each edition — <Link href={`https://etherscan.io/token/${contract}`} >
                             <a target="_blank" rel="noreferrer" className=''>erc721</a></Link> — comes with: <br />
@@ -295,10 +303,20 @@ const Mint: NextPage = () => {
                             <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
                         </Link>
                         </p>
-                    <div className='mb-[15em]'>released September 26, 2022
+                    <p>
+                    mastering and coding by <Link href='https://astrosuka.xyz' ><a target="_blank" className=''>Astrosuka</a></Link> & <Link href='https://sofffja.com' ><a target="_blank" className=''>Sofja</a></Link>
+                    </p>
+                    <div className=''>released September 26, 2022
+                    </div>
+                    <br />
+                    <div className='mt-[4em]'>
+                    <Link href="un000" className=''>
+                            <a className=''>{`< PREVIOUS RELEASE [UN000]`}</a>
+                        </Link>
                     </div>
                 </div>
- 
+                        
+                        
             </main>
         </div>
     )
