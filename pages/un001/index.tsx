@@ -296,13 +296,13 @@ const Mint: NextPage = () => {
                                 view gallery
                             </a>
                         </Link> 
-                    </div>
+                </div>
                     <br />
                     <p>available on &nbsp;
                         <Link href='https://unun.bandcamp.com/album/un001-ocelo' >
                             <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
                         </Link>
-                        </p>
+                    </p>
                     <p>
                     mastering and coding by <Link href='https://astrosuka.xyz' ><a target="_blank" className=''>Astrosuka</a></Link> & <Link href='https://sofffja.com' ><a target="_blank" className=''>Sofja</a></Link>
                     </p>

@@ -39,10 +39,10 @@ export const About = () => {
             by <Link href='https://sofffja.com' ><a target="_blank" className=''>sofja</a></Link> + <Link href='https://astrosuka.xyz' ><a target="_blank" className=''>astrosuka</a></Link>
           </p>
           <p className="pt-1">
-            <Link href='https://unun.bandcamp.com' ><a target="_blank" className=''>bc</a></Link> | &nbsp; 
-            <Link href='https://instagram.com/unun.link' ><a target="_blank" className=''>ig</a></Link> | &nbsp;
-            <Link href='https://twitter.com/ununlink' ><a target="_blank" className=''>tw</a></Link> | &nbsp;
-            <Link href='https://github.com/ununlink/unun' ><a target="_blank" className=''>git</a></Link>
+            <Link href='https://unun.bandcamp.com' ><a target="_blank" className=''>bandcamp</a></Link> | &nbsp; 
+            <Link href='https://instagram.com/unun.link' ><a target="_blank" className=''>instagram</a></Link> | &nbsp;
+            <Link href='https://twitter.com/ununlink' ><a target="_blank" className=''>twitter</a></Link> | &nbsp;
+            <Link href='https://github.com/ununlink/unun' ><a target="_blank" className=''>github</a></Link>
           </p>
 
         

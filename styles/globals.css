@@ -104,14 +104,6 @@ font-weight: 300;
 font-style: normal;
 }
 
-.un001 {
-  background-image: url('../assets/9.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 .links-wrap {
   text-transform: lowercase;
 
