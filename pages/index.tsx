@@ -36,10 +36,20 @@ const Home: NextPage = () => {
                     </Link>                    
                 </div>
             </main> */}
+
+              
             <main className=''>
+
+                <div className='fixed top-14 z-[-10]'>
+                    <video autoPlay loop muted style={{ width: '500px', height: '500px' }}>
+                        <source src="/film.mp4" />
+                    </video>
+
+                </div>
+
                 <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0 ">
                     <Marquee
-                                    className="md:text-[10em] text-[6em] overflow-hidden font-black text-[#ff4400] italic" speed={200}
+                                    className="banner md:text-[10em] text-[6em] overflow-hidden font-black italic" speed={200}
                                 >unun. mutable netlabel for hybrid music & multimedia experiments.&nbsp;
                     </Marquee>
                     <div className="flex flex-row flex-wrap justify-center mt-16 space-x-8 items-center md:text-[1em] text-[1em]">

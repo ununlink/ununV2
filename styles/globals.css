@@ -25,10 +25,19 @@ body[data-theme="dark"] {
   --glass-b: rgba(0,0,0,0.2);
   --shadow: #444;
   --link-glow: rgb(106, 87, 156);
-  --link-hover: #62ff00;
+  /* --link-hover: #62ff00; */
+  --link-hover: yellow;
   --mint-hover: rgb(27, 27, 27);
 }
 
+::selection {
+  color: var(--bg-color);
+  background: #ff4400;
+}
+
+.banner {
+  color: #ff4400;
+}
 html,
 body {
   background-color: var(--bg-color);
