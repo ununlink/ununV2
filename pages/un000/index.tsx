@@ -77,7 +77,7 @@ const Mint: NextPage = () => {
             <main className="flex flex-col md:flex-row">
                 <div className="w-[100%] lg:w-[50%] min-w-[150px] text-center mb-1">
                 {/* <Image  width={800} height={800} src="https://ipfs.io/ipfs/bafybeihtbkqe27zo32njducvwncl73mmzj5w5ag634r7y5g6yykfdlfh3y" /> */}
-                     <Image  width={730} height={730} src="/0000114.jpg" />
+                     <Image alt='inicio'  width={730} height={730} src="/0000114.jpg" />
                 </div>
                 <div className="flex flex-col flex-wrap items-left mb-10 md:mb-0 pl-2 pr-2">
                 <div className={`mb-2 text-2xl`} >
@@ -96,7 +96,7 @@ const Mint: NextPage = () => {
                         </p>
                         <br />
                         <p>
-                           music synthesized and recorded directly from an access virus ti2's output to a single stereo track. <br />
+                           music synthesized and recorded directly from an access virus ti2&apos;s output to a single stereo track. <br />
                            artworks coded in p5.js by the artists.
                         </p>
                         <br />

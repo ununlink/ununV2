@@ -178,7 +178,7 @@ const Mint: NextPage = () => {
 
 <main className="flex flex-col md:flex-row">
                 <div className="w-[100%] lg:w-[50%] min-w-[150px] text-center mb-1">
-                <Image  width={730} height={730} src="/0000227.jpg" />
+                <Image alt='ocelo' width={730} height={730} src="/0000227.jpg" />
                      {/* <Image  width={750} height={750} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" /> */}
                 </div>
                 <div className="flex flex-col flex-wrap items-left mb-10 md:mb-0 pl-2 pr-2">
