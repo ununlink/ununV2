@@ -311,7 +311,7 @@ const Mint: NextPage = () => {
                     <br />
                     <div className='mt-[4em]'>
                     <Link href="un000" className=''>
-                            <a className=''>{`< PREVIOUS RELEASE [UN000]`}</a>
+                            <a className=''>{`< PREVIOUS RELEASE`}</a>
                         </Link>
                     </div>
                 </div>

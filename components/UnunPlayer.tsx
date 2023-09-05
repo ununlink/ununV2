@@ -3,7 +3,7 @@ import React from 'react';
 // import useAppContext from '../context/useAppContext';
 // import useAppContext2 from '../context/otherContext';
 
-export const NFTPlayer = () => {
+export const UnunPlayer = () => {
   // const playlist = useAppContext2()
   // console.log(playlist)
   const playlist = [

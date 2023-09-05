@@ -91,8 +91,8 @@ const Mint: NextPage = () => {
                        
                         <br />
                         <p>
-                            1. inicio [03:47]<br />
-                            2. escondido [04:20] — <span className='italic'>hidden track</span>
+                            01. inicio [03:47]<br />
+                            02. escondido [04:20] — <span className='italic'>hidden track</span>
                         </p>
                         <br />
                         <p>
@@ -180,7 +180,7 @@ const Mint: NextPage = () => {
 
                     <div className='mt-[4em]'>
                     <Link href="un001" className=''>
-                            <a className=''>{`NEXT RELEASE [UN001] >`}</a>
+                            <a className=''>{`NEXT RELEASE >`}</a>
                         </Link>
                     </div>
                 </div>
