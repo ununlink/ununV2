@@ -35,9 +35,9 @@ const STYLE_OVERRIDE = {
 };
 
 function imageIndex(tokenIndex){
-  if (tokenIndex < 11){
+  if (tokenIndex < 10){
     return "000000";
-  } else if (tokenIndex >= 11 && tokenIndex < 101){
+  } else if (tokenIndex >= 10 && tokenIndex < 100){
     return "00000";
   } else {
     return "0000";
