@@ -161,7 +161,7 @@ const Mint: NextPage = () => {
                         </div>
                     )}   
                 </div>
-                    <div >
+                    {/* <div >
                         <Link
                             href="/un000/gallery" className=''
                         >
@@ -169,7 +169,7 @@ const Mint: NextPage = () => {
                                 view gallery
                             </a>
                         </Link> 
-                    </div>
+                    </div> */}
                     <br />
                     <p>available on &nbsp;
                         <Link href='https://unun.bandcamp.com/album/un000-inicio' >

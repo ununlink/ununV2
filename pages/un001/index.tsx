@@ -9,6 +9,7 @@ import { useAppContext } from "../../context/useAppContext"
 import MintQuantity from '../../components/MintQuantity'
 import PostMintDialog from '../../components/PostMintDialog'
 import { ourCollection2, tokenPrice2 } from '../../constants/Constants'
+import Gallery from './gallery'
 
 const heavenly = "#ff0000"
 const price = tokenPrice2
@@ -288,7 +289,7 @@ const Mint: NextPage = () => {
                     )}   
                 </div>
            
-                <div >
+                {/* <div >
                         <Link
                             href="/un001/gallery" className=''
                         >
@@ -296,7 +297,7 @@ const Mint: NextPage = () => {
                                 view gallery
                             </a>
                         </Link> 
-                </div>
+                </div> */}
                     <br />
                     <p>available on &nbsp;
                         <Link href='https://unun.bandcamp.com/album/un001-ocelo' >
@@ -318,6 +319,8 @@ const Mint: NextPage = () => {
                         
                         
             </main>
+
+            <Gallery />
         </div>
     )
 }

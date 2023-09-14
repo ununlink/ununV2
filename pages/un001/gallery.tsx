@@ -6,6 +6,7 @@ import { NFTObject, Networks, Strategies } from '@zoralabs/nft-hooks'
 import { NFTPreview, MediaConfiguration } from '@zoralabs/nft-components'
 import { NFTGridLoadMore } from '../../components/NFTGridLoadMore'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const contract = ourCollection2
 
@@ -31,6 +32,16 @@ const STYLE_OVERRIDE = {
     useEnsResolution: true,
     useCollectionTag: true,
     },
+};
+
+function imageIndex(tokenIndex){
+  if (tokenIndex < 11){
+    return "000000";
+  } else if (tokenIndex >= 11 && tokenIndex < 101){
+    return "00000";
+  } else {
+    return "0000";
+  }
 };
 
 const Gallery: NextPage = () => {
@@ -79,13 +90,17 @@ const Gallery: NextPage = () => {
                 CARD_CREATED_BY: "↳",              
               }}
             >
-              <NFTPreview                 
+              {/* <NFTPreview                 
                 contract={contract} 
                 id={nft?.nft?.tokenId} 
                 href={`https://zora.co/collections/${contract}/${nft?.nft?.tokenId}`}
                 showBids={false}
                 showPerpetual={false}
-              />
+              /> */}
+
+              <Link href={`https://ipfs.decentralized-content.com/ipfs/bafybeiaundd7gawes35cs4licivqfqvcp2qqaaogqvkkissfgfue5rrgiu/${nft?.nft?.tokenId}.jpg`} >
+              <Image src={`https://ipfs.decentralized-content.com/ipfs/bafybeiaundd7gawes35cs4licivqfqvcp2qqaaogqvkkissfgfue5rrgiu/${nft?.nft?.tokenId}.jpg`} alt={nft?.nft?.tokenId} width={400} height={400} className='hover:cursor-crosshair' />
+              </Link>
             </MediaConfiguration>
           )}
         </div>
