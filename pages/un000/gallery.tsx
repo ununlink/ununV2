@@ -99,7 +99,9 @@ const Gallery: NextPage = () => {
                 showPerpetual={false}
               /> */}
               <Link href={`https://ipfs.decentralized-content.com/ipfs/bafybeigs4g2j74r44o5lbfegdven7ejoq65mosildkun63r3ct2jjl6emm/${imageIndex(nft?.nft?.tokenId)}${nft?.nft?.tokenId}.jpg`} >
+              <a target='_blank'>
               <Image src={`https://ipfs.decentralized-content.com/ipfs/bafybeigs4g2j74r44o5lbfegdven7ejoq65mosildkun63r3ct2jjl6emm/${imageIndex(nft?.nft?.tokenId)}${nft?.nft?.tokenId}.jpg`} alt={nft?.nft?.tokenId} width={400} height={400} className='hover:cursor-crosshair' />
+              </a>
               </Link>
             </MediaConfiguration>
           )}

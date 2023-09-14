@@ -65,7 +65,9 @@ a {
   /* font-style: italic; */
   color: inherit;
   /* text-decoration: underline; */
-  @apply drop-shadow-glow
+  /* @apply drop-shadow-glow */
+  margin: 0%;
+  padding: 0%;
 }
 a:hover {
   color: var(--link-hover);
