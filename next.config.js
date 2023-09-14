@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['ipfs.io']
+    domains: ['ipfs.io', 'ipfs.decentralized-content.com']
   },
   // async redirects() {
   //   return [

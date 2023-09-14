@@ -5,6 +5,8 @@ import { ourCollection } from '../../constants/Constants'
 import { NFTObject, Networks, Strategies } from '@zoralabs/nft-hooks'
 import { NFTPreview, MediaConfiguration } from '@zoralabs/nft-components'
 import { NFTGridLoadMore } from '../../components/NFTGridLoadMore'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const contract = ourCollection
 
@@ -30,6 +32,16 @@ const STYLE_OVERRIDE = {
   useEnsResolution: true,
   useCollectionTag: true,
   },
+};
+
+function imageIndex(tokenIndex){
+  if (tokenIndex < 11){
+    return "000000";
+  } else if (tokenIndex >= 11 && tokenIndex < 101){
+    return "00000";
+  } else {
+    return "0000";
+  }
 };
 
 const Gallery: NextPage = () => {
@@ -72,13 +84,23 @@ const Gallery: NextPage = () => {
                 CARD_CREATED_BY: "↳",              
               }}
             >
-              <NFTPreview                 
+              {/* <NFTPreview                 
                 contract={contract} 
                 id={nft?.nft?.tokenId} 
                 href={`https://zora.co/collections/${contract}/${nft?.nft?.tokenId}`}
                 showBids={false}
                 showPerpetual={false}
-              />
+              /> */}
+                 {/* <NFTPreview                 
+                contract={contract} 
+                id={nft?.nft?.tokenId} 
+                href={`https://ipfs.decentralized-content.com/ipfs/bafybeigs4g2j74r44o5lbfegdven7ejoq65mosildkun63r3ct2jjl6emm/${imageIndex(nft?.nft?.tokenId)}${nft?.nft?.tokenId - 1}.jpg`}
+                showBids={false}
+                showPerpetual={false}
+              /> */}
+              <Link href={`https://ipfs.decentralized-content.com/ipfs/bafybeigs4g2j74r44o5lbfegdven7ejoq65mosildkun63r3ct2jjl6emm/${imageIndex(nft?.nft?.tokenId)}${nft?.nft?.tokenId - 1}.jpg`} >
+              <Image src={`https://ipfs.decentralized-content.com/ipfs/bafybeigs4g2j74r44o5lbfegdven7ejoq65mosildkun63r3ct2jjl6emm/${imageIndex(nft?.nft?.tokenId)}${nft?.nft?.tokenId - 1}.jpg`} alt={nft?.nft?.tokenId} width={400} height={400} className='hover:cursor-crosshair' />
+              </Link>
             </MediaConfiguration>
           )}
         </div>

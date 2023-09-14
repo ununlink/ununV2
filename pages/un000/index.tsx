@@ -9,6 +9,7 @@ import { useAppContext } from "../../context/useAppContext"
 import MintQuantity from '../../components/MintQuantity'
 import PostMintDialog from '../../components/PostMintDialog'
 import { ourCollection, tokenPrice } from '../../constants/Constants'
+import Gallery from './gallery'
 
 const heavenly = "#ff0000"
 const price = tokenPrice
@@ -184,8 +185,13 @@ const Mint: NextPage = () => {
                         </Link>
                     </div>
                 </div>
+
+
+                
  
             </main>
+
+            <Gallery />
         </div>
     )
 }

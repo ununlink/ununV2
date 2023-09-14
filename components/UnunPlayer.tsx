@@ -35,6 +35,7 @@ export const UnunPlayer = () => {
   const handleClickNext = () => {
         setTrackIndex((currentTrack) =>
             currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
+            
         );
     };
 
