@@ -106,6 +106,15 @@ font-weight: 300;
 font-style: normal;
 }
 
+.terminal {
+  /* background-color: var(--main-color);
+  color: var(--bg-color); */
+  font-family: 'Courier New', Courier, monospace;
+  /* visibility: hidden ; */
+  /* position: fixed; */
+
+}
+
 .links-wrap {
   text-transform: lowercase;
 

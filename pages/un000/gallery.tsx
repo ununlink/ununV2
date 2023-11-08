@@ -7,6 +7,7 @@ import { NFTPreview, MediaConfiguration } from '@zoralabs/nft-components'
 import { NFTGridLoadMore } from '../../components/NFTGridLoadMore'
 import Image from 'next/image'
 import Link from 'next/link'
+import Terminal from '../../components/Terminal'
 
 const contract = ourCollection
 
@@ -115,7 +116,37 @@ const Gallery: NextPage = () => {
         <div className='w-[100%] text-center mb-20'>
           view on <a href={`https://market.zora.co/collections/${contract}`} target={`_blank`}>zora</a> / <a href="https://opensea.io/collection/un000-inicio" target={`_blank`}>opensea</a>
         </div> 
+
+
+        {/* <Terminal /> */}
+
+
+        {/* <div className='pt-2 pl-6 pb-10 w-[100%] text-left text-xs terminal'>data:
+              {data && data.map((nft: NFTObject) =>
+                      <>
+                      <ul className='text-xs flex flex-row flex-wrap justify-left items-center'>
+                        <li>
+                        id: {nft?.nft?.tokenId} ._ 
+                        artista: {nft?.metadata?.attributes[0].value} .
+                        {nft?.metadata?.attributes[1].value} mode .
+                        portal: {nft?.metadata?.attributes[2].value} .
+                        data: {nft?.metadata?.attributes[3].value} .
+                        seal: {nft?.metadata?.attributes[4].value} .
+                        watermark: {nft?.metadata?.attributes[5].value} .
+                        owner: {nft?.nft?.owner.address} .
+                        date: {nft?.nft?.minted.at.timestamp} .
+                        </li>
+                      </ul>
+                      </>
+              )}
+        </div> */}
+
+
+
       </div>
+
+ 
+
     </div>
   )
 }

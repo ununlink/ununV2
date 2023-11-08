@@ -175,6 +175,10 @@ const Mint: NextPage = () => {
                         <Link href='https://unun.bandcamp.com/album/un000-inicio' >
                             <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
                         </Link>
+                        &nbsp; and &nbsp;
+                        <Link href='https://www.ninaprotocol.com/5T1JWE8mvAV6SXxYHjU4ejCP65GAh3nJuZEnJASVciFW' >
+                            <a target="_blank" rel="noreferrer" className=''>nina protocol</a>
+                        </Link>
                         </p>
                     <div className=''>released August 6, 2022
                     </div>
@@ -192,6 +196,8 @@ const Mint: NextPage = () => {
             </main>
 
             <Gallery />
+            
+
         </div>
     )
 }

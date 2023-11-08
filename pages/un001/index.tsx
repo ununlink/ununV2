@@ -177,7 +177,7 @@ const Mint: NextPage = () => {
                 </div>
             </main> */}
 
-<main className="flex flex-col md:flex-row pb-[8em] lg:pb-[6em]">
+            <main className="flex flex-col md:flex-row pb-[8em] lg:pb-[6em]">
                 <div className="w-[100%] lg:w-[50%] min-w-[150px] text-center mb-1">
                 <Image alt='ocelo' width={730} height={730} src="/0000227.jpg" />
                      {/* <Image  width={750} height={750} src="https://ipfs.io/ipfs/bafybeiamaqgrlcsuiowkbqgmwypcznbzffhyslrikzs3ihrtuln4kwpevy/ocelo%20-%20cover.jpg" /> */}
@@ -302,6 +302,10 @@ const Mint: NextPage = () => {
                     <p>available on &nbsp;
                         <Link href='https://unun.bandcamp.com/album/un001-ocelo' >
                             <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
+                        </Link>
+                        &nbsp; and &nbsp;
+                        <Link href='https://www.ninaprotocol.com/9H9YQhdbvBhTpLiiFG322iWta9iokmzLFEBPZTbSDgCm' >
+                            <a target="_blank" rel="noreferrer" className=''>nina protocol</a>
                         </Link>
                     </p>
                     <p>
