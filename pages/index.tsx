@@ -49,15 +49,14 @@ const Home: NextPage = () => {
 
                 <div className="flex flex-row flex-wrap justify-center space-x-4 items-center mb-10 md:mb-0 ">
                          <Link
-                                    href="https://unun.bandcamp.com/album/un002-m-sica-electr-nica-i"
+                                    href="/un002"
                                 >
                                     <a 
                                     className=" hover:text-hover hover:unerline hover:cursor-help
                                     text-[1.2em]
                                     md:text-[1.5em]"
-                                    target={`_blank`}
                                     >
-                                       pre-order [UN002] Aguja - M​ú​sica Electr​ó​nica I
+                                       [UN002] Aguja - M​ú​sica Electr​ó​nica I
                                     </a>
                         </Link>
                     <Marquee
