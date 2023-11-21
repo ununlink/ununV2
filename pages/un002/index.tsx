@@ -280,10 +280,10 @@ const Mint: NextPage = () => {
                         <Link href='https://unun.bandcamp.com/album/un002-m-sica-electr-nica-i' >
                             <a target="_blank" rel="noreferrer" className=''>bandcamp</a>
                         </Link>
-                        {/* &nbsp; and &nbsp;
-                        <Link href='https://www.ninaprotocol.com/9H9YQhdbvBhTpLiiFG322iWta9iokmzLFEBPZTbSDgCm' >
+                        &nbsp; and &nbsp;
+                        <Link href='https://www.ninaprotocol.com/releases/aguja-m-u-sica-electr-onica-i' >
                             <a target="_blank" rel="noreferrer" className=''>nina protocol</a>
-                        </Link> */}
+                        </Link>
                     </p>
                     <p>
                     {/* Music, cover artwork,: Astrosuka, Sofja
